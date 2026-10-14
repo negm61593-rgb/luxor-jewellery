@@ -144,6 +144,7 @@
     setupModals();
     initGoldPrices();
     initPwa();
+    initLuxuryAnimatedCanvas();
   }
 
   // ------------------------------------------------------------
@@ -543,6 +544,163 @@
     if (id === 'ounce') return 'Ounce';
     if (id === 'usd') return 'Usd';
     return id.charAt(0).toUpperCase() + id.slice(1);
+  }
+
+  // ------------------------------------------------------------
+  // Living Royal 24K Gold Stardust & Diamond Sparkles Engine
+  // ------------------------------------------------------------
+  function initLuxuryAnimatedCanvas() {
+    const canvas = document.getElementById('luxuryCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Check prefers-reduced-motion
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    const wrapper = canvas.parentElement || document.body;
+    let width = 0, height = 0;
+    let animId = null;
+    let isVisible = true;
+
+    function resize() {
+      const rect = wrapper.getBoundingClientRect();
+      width = canvas.width = rect.width || window.innerWidth;
+      height = canvas.height = rect.height || window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize, { passive: true });
+    resize();
+
+    // Floating Golden Stardust Particles
+    const count = Math.min(36, Math.max(18, Math.floor(width / 15)));
+    const particles = [];
+    const colors = ['#DEA637', '#FFE6A8', '#FFD700', '#F3CA7E', '#FFF2D1'];
+
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 2.2 + 0.8,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: - (Math.random() * 0.42 + 0.22),
+        alpha: Math.random() * 0.6 + 0.2,
+        pulseSpeed: Math.random() * 0.03 + 0.015,
+        phase: Math.random() * Math.PI * 2,
+        color: colors[Math.floor(Math.random() * colors.length)]
+      });
+    }
+
+    // Diamond Starburst Sparkles
+    const sparkles = [];
+    function trySpawnSparkle() {
+      if (sparkles.length < 5 && Math.random() < 0.06) {
+        sparkles.push({
+          x: Math.random() * (width - 60) + 30,
+          y: Math.random() * (height - 60) + 30,
+          maxSize: Math.random() * 14 + 10,
+          rot: Math.random() * Math.PI,
+          rotSpeed: (Math.random() - 0.5) * 0.02,
+          life: 0,
+          maxLife: Math.floor(Math.random() * 60 + 55),
+          isDiamond: Math.random() > 0.4
+        });
+      }
+    }
+
+    function drawSparkle(s) {
+      ctx.save();
+      ctx.translate(s.x, s.y);
+      ctx.rotate(s.rot);
+
+      const progress = s.life / s.maxLife;
+      const curve = Math.sin(progress * Math.PI);
+      const curSize = s.maxSize * curve;
+      const alpha = curve;
+
+      const haloColor = s.isDiamond 
+        ? 'rgba(255, 255, 255, ' + (alpha * 0.9) + ')' 
+        : 'rgba(255, 235, 175, ' + (alpha * 0.95) + ')';
+
+      ctx.fillStyle = haloColor;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, curSize, curSize * 0.14, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, 0, curSize * 0.14, curSize, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.ellipse(0, 0, curSize * 0.5, curSize * 0.08, Math.PI / 4, 0, Math.PI * 2);
+      ctx.ellipse(0, 0, curSize * 0.08, curSize * 0.5, Math.PI / 4, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(0, 0, curSize * 0.22, 0, Math.PI * 2);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = s.isDiamond ? '#FFFFFF' : '#FFD700';
+      ctx.fill();
+
+      ctx.restore();
+    }
+
+    function render() {
+      if (!isVisible) return;
+      ctx.clearRect(0, 0, width, height);
+
+      // Dust particles
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.phase += p.pulseSpeed;
+        const currentAlpha = Math.max(0.1, Math.min(0.9, p.alpha + Math.sin(p.phase) * 0.3));
+
+        p.x += p.vx + Math.sin(p.phase * 0.6) * 0.25;
+        p.y += p.vy;
+
+        if (p.y < -10) { p.y = height + 10; p.x = Math.random() * width; }
+        if (p.x < -10) p.x = width + 10;
+        if (p.x > width + 10) p.x = -10;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = currentAlpha;
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = p.color;
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      ctx.shadowBlur = 0;
+
+      // Diamond sparkles
+      trySpawnSparkle();
+      for (let i = sparkles.length - 1; i >= 0; i--) {
+        const s = sparkles[i];
+        s.life++;
+        s.rot += s.rotSpeed;
+        drawSparkle(s);
+        if (s.life >= s.maxLife) {
+          sparkles.splice(i, 1);
+        }
+      }
+
+      animId = requestAnimationFrame(render);
+    }
+
+    // Battery & CPU optimization: pause when tab is hidden
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        isVisible = false;
+        if (animId) cancelAnimationFrame(animId);
+      } else {
+        isVisible = true;
+        resize();
+        animId = requestAnimationFrame(render);
+      }
+    });
+
+    animId = requestAnimationFrame(render);
   }
 
 })();
