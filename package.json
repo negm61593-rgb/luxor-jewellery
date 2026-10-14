@@ -1,0 +1,27 @@
+{
+  "name": "luxor-jewellery",
+  "version": "1.0.0",
+  "description": "Premium Digital Business Card website and print-ready QR codes for LUXOR JEWELLERY",
+  "scripts": {
+    "start": "node server.js",
+    "generate-qr": "node generate-qr.js",
+    "test": "node run-all-tests.js"
+  },
+  "keywords": [
+    "jewelry",
+    "digital-business-card",
+    "luxor-jewellery",
+    "vcard",
+    "qr-code"
+  ],
+  "author": "LUXOR JEWELLERY",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
+    "vercel": "^64.0.2"
+  }
+}

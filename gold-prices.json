@@ -1,0 +1,102 @@
+{
+  "success": true,
+  "timestamp": "2026-10-13T23:23:43.350Z",
+  "formattedTimeAr": "٠٢:٢٣ ص",
+  "formattedTimeEn": "02:23 AM",
+  "formattedDateAr": "الأربعاء، ١٤ أكتوبر ٢٠٢٦",
+  "formattedDateEn": "Wed, Oct 14, 2026",
+  "source": "Gold Bullion Egypt",
+  "sourceUrl": "https://goldbullioneg.com/%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%87%D8%A8/",
+  "marketStatusAr": "سوق الذهب مفتوح الآن",
+  "marketStatusEn": "Gold Market is Open",
+  "items": [
+    {
+      "id": "24k",
+      "nameAr": "عيار 24",
+      "nameEn": "24K Gold",
+      "buy": 7046,
+      "sell": 7023,
+      "currency": "EGP",
+      "change": "+0 ج",
+      "changeDir": "up",
+      "isPrimary": true
+    },
+    {
+      "id": "22k",
+      "nameAr": "عيار 22",
+      "nameEn": "22K Gold",
+      "buy": 6459,
+      "sell": 6438,
+      "currency": "EGP",
+      "change": "+0 ج",
+      "changeDir": "up",
+      "isPrimary": false
+    },
+    {
+      "id": "21k",
+      "nameAr": "عيار 21",
+      "nameEn": "21K Gold",
+      "buy": 6165,
+      "sell": 6145,
+      "currency": "EGP",
+      "change": "+0 ج",
+      "changeDir": "up",
+      "isPrimary": true
+    },
+    {
+      "id": "18k",
+      "nameAr": "عيار 18",
+      "nameEn": "18K Gold",
+      "buy": 5284,
+      "sell": 5267,
+      "currency": "EGP",
+      "change": "+0 ج",
+      "changeDir": "up",
+      "isPrimary": true
+    },
+    {
+      "id": "14k",
+      "nameAr": "عيار 14",
+      "nameEn": "14K Gold",
+      "buy": 4110,
+      "sell": 4096,
+      "currency": "EGP",
+      "change": "+0 ج",
+      "changeDir": "up",
+      "isPrimary": false
+    },
+    {
+      "id": "usd",
+      "nameAr": "الدولار",
+      "nameEn": "USD / EGP",
+      "buy": 52.7,
+      "sell": 52.6,
+      "currency": "EGP",
+      "change": "+0 ج",
+      "changeDir": "up",
+      "isPrimary": false
+    },
+    {
+      "id": "ounce",
+      "nameAr": "الأونصة",
+      "nameEn": "Gold Ounce",
+      "buy": 4198.46,
+      "sell": 4197.96,
+      "currency": "USD",
+      "change": "+0 $",
+      "changeDir": "up",
+      "isPrimary": false
+    },
+    {
+      "id": "pound",
+      "nameAr": "الجنيه الذهب",
+      "nameEn": "Gold Pound",
+      "buy": 49320,
+      "sell": 49160,
+      "currency": "EGP",
+      "change": "+0 ج",
+      "changeDir": "up",
+      "isPrimary": true
+    }
+  ]
+}

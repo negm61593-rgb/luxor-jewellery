@@ -1,0 +1,512 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" width="1200" height="1200" shape-rendering="geometricPrecision">
+  <defs>
+    <!-- Rich Metallic Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A059" />
+      <stop offset="25%" stop-color="#F3DC9B" />
+      <stop offset="50%" stop-color="#C5A059" />
+      <stop offset="75%" stop-color="#E5C275" />
+      <stop offset="100%" stop-color="#8E6A26" />
+    </linearGradient>
+
+    <!-- Pupil Gradient -->
+    <linearGradient id="pupilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1815" />
+      <stop offset="50%" stop-color="#2D2922" />
+      <stop offset="100%" stop-color="#0F0E0D" />
+    </linearGradient>
+
+    <!-- Dot / Module Color: Obsidian with soft warmth -->
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141311" />
+      <stop offset="100%" stop-color="#22201C" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow for Badge -->
+    <filter id="badgeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0.12" stdDeviation="0.25" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+
+    <clipPath id="logoCircleClip">
+      <circle cx="19.5" cy="19.5" r="4.02" />
+    </clipPath>
+  </defs>
+
+  <!-- Clean crisp background -->
+  <rect width="39" height="39" rx="2" fill="#FFFFFF" />
+
+  <!-- QR Modules -->
+  <rect x="12.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="3.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="4.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="4.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="4.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="4.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="4.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="4.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="4.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="5.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="6.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="6.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="6.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="6.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="6.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="6.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="7.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="7.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="7.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="7.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="7.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="7.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="7.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="8.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="9.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="10.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="10.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="10.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="10.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="10.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="10.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="11.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="12.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="13.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="14.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="15.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="16.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="17.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="7.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="18.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="7.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="19.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="7.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="20.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="21.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="7.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="22.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="23.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="7.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="24.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="25.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="4.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="6.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="7.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="8.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="26.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="3.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="5.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="9.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="10.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="27.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="28.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="21.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="29.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="30.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="31.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="23.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="34.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="32.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="11.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="25.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="32.05" y="33.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="16.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="20.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="26.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="27.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="35.05" y="34.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="12.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="13.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="14.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="15.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="17.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="18.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="19.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="22.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="24.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="28.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="29.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="30.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="31.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+<rect x="33.05" y="35.05" width="0.9" height="0.9" rx="0.32" fill="url(#dotGrad)" />
+
+
+  <!-- 3 Custom Luxury Finder Eyes -->
+  
+    <g class="finder-eye">
+      <!-- Outer rounded squircle frame (7x7 modules) -->
+      <rect x="3" y="3" width="7" height="7" rx="2" fill="none" stroke="url(#goldGrad)" stroke-width="1.05" />
+      <!-- Subtle inner white gap (5x5 modules) -->
+      <rect x="4" y="4" width="5" height="5" rx="1.3" fill="#FFFFFF" />
+      <!-- Inner luxury eye pupil (3x3 modules) -->
+      <rect x="5" y="5" width="3" height="3" rx="1" fill="url(#pupilGrad)" />
+      <!-- Small jewel glint in pupil -->
+      <circle cx="6" cy="6" r="0.3" fill="#FFFFFF" opacity="0.6" />
+    </g>
+  
+    <g class="finder-eye">
+      <!-- Outer rounded squircle frame (7x7 modules) -->
+      <rect x="29" y="3" width="7" height="7" rx="2" fill="none" stroke="url(#goldGrad)" stroke-width="1.05" />
+      <!-- Subtle inner white gap (5x5 modules) -->
+      <rect x="30" y="4" width="5" height="5" rx="1.3" fill="#FFFFFF" />
+      <!-- Inner luxury eye pupil (3x3 modules) -->
+      <rect x="31" y="5" width="3" height="3" rx="1" fill="url(#pupilGrad)" />
+      <!-- Small jewel glint in pupil -->
+      <circle cx="32" cy="6" r="0.3" fill="#FFFFFF" opacity="0.6" />
+    </g>
+  
+    <g class="finder-eye">
+      <!-- Outer rounded squircle frame (7x7 modules) -->
+      <rect x="3" y="29" width="7" height="7" rx="2" fill="none" stroke="url(#goldGrad)" stroke-width="1.05" />
+      <!-- Subtle inner white gap (5x5 modules) -->
+      <rect x="4" y="30" width="5" height="5" rx="1.3" fill="#FFFFFF" />
+      <!-- Inner luxury eye pupil (3x3 modules) -->
+      <rect x="5" y="31" width="3" height="3" rx="1" fill="url(#pupilGrad)" />
+      <!-- Small jewel glint in pupil -->
+      <circle cx="6" cy="32" r="0.3" fill="#FFFFFF" opacity="0.6" />
+    </g>
+
+  <!-- Center Logo Badge -->
+  <g id="centerBadge" filter="url(#badgeGlow)">
+    <!-- Outer metallic gold rim -->
+    <circle cx="19.5" cy="19.5" r="4.3" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="0.35" />
+    <!-- Secondary inner decorative ring -->
+    <circle cx="19.5" cy="19.5" r="4.05" fill="#FFFFFF" stroke="#EED596" stroke-width="0.08" />
+    <!-- Logo Image -->
+    <image href="data:image/jpeg;base64,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" x="16.06" y="16.06" width="6.88" height="6.88" preserveAspectRatio="xMidYMid meet" clip-path="url(#logoCircleClip)" />
+  </g>
+</svg>

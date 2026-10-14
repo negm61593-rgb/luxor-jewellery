@@ -1,0 +1,11 @@
+node_modules
+.vercel
+*.log
+screenshot_*.png
+luxury_edition_*.png
+render_test.html
+test_render.html
+map_preview.png
+test-artifacts/
+avatar_original_backup.jpg
+PHONE_PREVIEW_QR.png

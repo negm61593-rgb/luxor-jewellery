@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#B3873D">
+
+  <!-- Primary SEO -->
+  <title>LUXOR JEWELLERY | لوكسور للمجوهرات — Official Digital Business Card</title>
+  <meta name="description" content="Luxury jewellery crafted to shine — LUXOR JEWELLERY Official Digital Business Card">
+  <meta name="keywords" content="LUXOR JEWELLERY, gold, diamonds, silver, watches, Heliopolis, Cairo, Egypt">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="LUXOR JEWELLERY — لوكسور للمجوهرات">
+  <meta property="og:description" content="Luxury jewellery crafted to shine">
+  <meta property="og:url" content="https://luxor-jewellery.vercel.app">
+  <meta property="og:image" content="avatar.jpg">
+  <meta property="profile:username" content="luxorjewellery.eg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LUXOR JEWELLERY — لوكسور للمجوهرات">
+  <meta name="twitter:description" content="Luxury jewellery crafted to shine">
+  <meta name="twitter:image" content="avatar.jpg">
+
+  <!-- Favicon & PWA App Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="LUXOR">
+  <meta name="application-name" content="LUXOR JEWELLERY">
+
+  <!-- Google Fonts Preconnect & Async Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Preload Critical CSS & Hero Image -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="avatar.webp" as="image" type="image/webp">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Brand Elements for Accessibility & SEO -->
+  <div style="display:none;" aria-hidden="true">
+    <h1 id="headerTitle">LUXOR</h1>
+    <p id="headerSubtitle">JEWELLERY</p>
+    <div id="seoServices">
+      <span>Buying & Selling Gold</span>
+      <span>Buying & Selling Diamonds</span>
+      <span>Buying & Selling Silver</span>
+      <span>Watch Evaluation & Purchasing</span>
+      <span>بيع وشراء الذهب</span>
+    </div>
+  </div>
+
+  <!-- Main Profile Container -->
+  <div class="profile-wrapper" id="profileWrapper">
+
+    <!-- Top Navigation Bar -->
+    <header class="topbar" id="topBar">
+      <!-- Left: Share Profile Button -->
+      <button class="topbar-btn" id="shareBtn" aria-label="Share profile" title="مشاركة الكرت / Share">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M216,112v96a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V112A16,16,0,0,1,56,96H80a8,8,0,0,1,0,16H56v96H200V112H176a8,8,0,0,1,0-16h24A16,16,0,0,1,216,112ZM93.66,69.66,120,43.31V136a8,8,0,0,0,16,0V43.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,69.66Z"></path>
+        </svg>
+      </button>
+
+      <!-- Right: Language Switcher Button (Stays Fixed on Right) -->
+      <button class="topbar-btn lang-toggle-btn" id="langToggle" aria-label="Toggle Language" title="تغيير اللغة / Switch Language">
+        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-segments-wrap">
+          <span class="lang-segment" id="langArSegment">عربي</span>
+          <span class="lang-sep" aria-hidden="true">/</span>
+          <span class="lang-segment" id="langEnSegment">EN</span>
+        </span>
+        <span id="langBtnText" style="display:none;" aria-hidden="true">العربية</span>
+      </button>
+    </header>
+
+    <!-- Profile Identity Header -->
+    <section class="profile-header">
+      <div class="avatar-container">
+        <picture>
+          <source srcset="avatar.webp" type="image/webp">
+          <img src="avatar.jpg" alt="LUXOR JEWELLERY Logo" class="profile-avatar" id="profileAvatar" width="104" height="104" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+
+      <h1 class="profile-title" id="profileTitle">@luxorjewellery.eg</h1>
+      <p class="profile-bio" id="profileBio">Luxury jewellery crafted to shine</p>
+
+      <!-- 5 Social Icons Row -->
+      <div class="social-icons-row" id="socialIconsRow" aria-label="Official Social Profiles">
+        <!-- 1. Instagram -->
+        <a href="https://www.instagram.com/luxorjewellery.eg/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" id="socialBtnInstagram" aria-label="@luxorjewellery.eg Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+        <!-- 2. Facebook -->
+        <a href="https://www.facebook.com/oval.jewellery?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="social-icon-btn" id="socialBtnFacebook" aria-label="@luxorjewellery.eg Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23 12C23 5.92487 18.0751 0.999996 12 0.999996C5.92488 0.999996 1 5.92487 1 12C1 17.1588 4.55146 21.4874 9.34266 22.6761V15.3614H7.07438V12H9.34266V10.5516C9.34266 6.80751 11.037 5.07215 14.7128 5.07215C15.4096 5.07215 16.6121 5.20877 17.104 5.34544V8.39261C16.8444 8.36529 16.3935 8.3516 15.8332 8.3516C14.0295 8.3516 13.3326 9.03484 13.3326 10.8112V12H16.9256L16.3084 15.3614H13.3326V22.9194C18.7792 22.2616 23 17.624 23 12Z"></path>
+          </svg>
+        </a>
+
+        <!-- 3. TikTok -->
+        <a href="https://www.tiktok.com/@luxorjewellery.eg?lang=ar" target="_blank" rel="noopener noreferrer" class="social-icon-btn" id="socialBtnTiktok" aria-label="@luxorjewellery.eg TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M15.9453 8.68918V15.6727C15.9453 19.1598 13.1048 22.0004 9.6177 22.0004C8.27369 22.0004 7.01685 21.5717 5.99251 20.8525C4.35796 19.7047 3.29004 17.8085 3.29004 15.6727C3.29004 12.1783 6.12333 9.34505 9.6104 9.34505C9.90101 9.34505 10.1843 9.36685 10.4676 9.40318V12.9121H10.4386C10.3151 12.8758 10.1843 12.8394 10.0536 12.8177H9.9954C9.86466 12.8032 9.74114 12.7813 9.60309 12.7813C8.00491 12.7813 6.70448 14.0817 6.70448 15.6799C6.70448 17.2782 8.00491 18.5786 9.60309 18.5786C11.2014 18.5786 12.5018 17.2782 12.5018 15.6799V2.00037H15.938C15.938 2.29822 15.9671 2.58881 16.0179 2.87213C16.2649 4.1798 17.035 5.30584 18.1175 6.01053C18.873 6.50452 19.7593 6.78785 20.7182 6.78785V10.2241C18.9416 10.2241 17.288 9.65222 15.9453 8.68918Z"></path>
+          </svg>
+        </a>
+
+        <!-- 4. Phone Line 2 (Hossam) -->
+        <a href="tel:+201007485585" class="social-icon-btn" id="socialBtnCallHossam" aria-label="اتصال بحسام / Call Hossam (01007485585)" title="اتصال — حسام (01007485585) / Call Hossam">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7.10017 4.95117C5.94682 4.95117 4.91406 5.89392 5.04649 7.13789C5.24297 8.98345 5.82353 10.7832 6.75899 12.3955C7.92319 14.4021 9.59697 16.0759 11.6036 17.2401C13.2269 18.1819 15.004 18.7358 16.8359 18.9387C18.0858 19.0771 19.0479 18.0445 19.0479 16.877V15.5057C19.0479 14.5517 18.4194 13.7117 17.5042 13.4425L16.1888 13.0556C15.4347 12.8339 14.6199 13.0505 14.0756 13.6175C13.7812 13.9241 13.3615 13.9714 13.0712 13.7836C11.9291 13.0451 10.954 12.07 10.2155 10.9279C10.0277 10.6376 10.075 10.2179 10.3816 9.92354C10.9486 9.37922 11.1653 8.56441 10.9435 7.81035L10.5566 6.49491C10.2874 5.57967 9.44741 4.95117 8.4934 4.95117H7.10017Z"></path>
+          </svg>
+        </a>
+
+        <!-- 5. WhatsApp Line 1 (Mahmoud) -->
+        <a href="https://wa.me/201018780830" target="_blank" rel="noopener noreferrer" class="social-icon-btn" id="socialBtnWaMahmoud" aria-label="واتساب محمود / WhatsApp Mahmoud (01018780830)" title="واتساب — محمود (01018780830) / WhatsApp Mahmoud">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7945 4.21258C17.7267 2.14211 14.9765 1.00129 12.0462 1.00024C6.00812 1.00024 1.09402 5.91382 1.09192 11.9535C1.09087 13.8842 1.59562 15.7688 2.55417 17.4296L1 23.1063L6.807 21.5831C8.40685 22.4561 10.2084 22.9157 12.0415 22.9162H12.0462C18.0832 22.9162 22.9979 18.0021 23 11.9624C23.001 9.03532 21.8628 6.28359 19.7945 4.21311V4.21258ZM12.0462 21.0663H12.0425C10.409 21.0658 8.80658 20.6267 7.40842 19.7973L7.07592 19.5999L3.62986 20.5038L4.54954 17.1438L4.33314 16.7993C3.42186 15.3497 2.94022 13.6741 2.94127 11.954C2.94337 6.93435 7.0276 2.85012 12.0499 2.85012C14.4817 2.85117 16.7676 3.79922 18.4866 5.52042C20.2058 7.24109 21.1517 9.52903 21.1507 11.9614C21.1485 16.9816 17.0643 21.0658 12.0462 21.0658V21.0663ZM17.0401 14.2477C16.7665 14.1107 15.4209 13.4488 15.1698 13.3575C14.9187 13.266 14.7365 13.2204 14.5542 13.4945C14.372 13.7687 13.8473 14.3854 13.6876 14.5676C13.5279 14.7504 13.3682 14.773 13.0946 14.6358C12.821 14.4988 11.9391 14.2099 10.8933 13.2776C10.0798 12.5517 9.53032 11.6557 9.3707 11.3815C9.21101 11.1073 9.35389 10.9592 9.49041 10.8232C9.61331 10.7003 9.76407 10.5033 9.90114 10.3436C10.0383 10.184 10.0834 10.0695 10.1748 9.88721C10.2662 9.70442 10.2205 9.5448 10.1522 9.40767C10.0839 9.27059 9.53667 7.92334 9.30818 7.37554C9.08598 6.84191 8.86017 6.91439 8.69261 6.90547C8.53292 6.89758 8.35069 6.89601 8.16791 6.89601C7.98512 6.89601 7.68886 6.96429 7.43781 7.23847C7.18677 7.51261 6.47978 8.17493 6.47978 9.52164C6.47978 10.8683 7.46042 12.1704 7.59749 12.3532C7.73457 12.536 9.52769 15.3003 12.2731 16.4863C12.926 16.7683 13.436 16.9369 13.8336 17.063C14.4891 17.2715 15.0857 17.2421 15.5574 17.1717C16.0832 17.0929 17.1767 16.5094 17.4047 15.8702C17.6326 15.2309 17.6326 14.6826 17.5644 14.5686C17.4961 14.4546 17.3133 14.3858 17.0396 14.2488L17.0401 14.2477Z"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Links Container -->
+    <main class="links-container" id="linksContainer">
+
+            <!-- 0. Live Gold Rates Trigger Card (خانة أسعار الذهب لحظة بلحظة) -->
+      <button type="button" class="link-card link-card--gold" id="goldRatesTriggerBtn" onclick="openGoldModal(event)" aria-haspopup="dialog" aria-expanded="false" data-link="gold">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7.5 5h6.5l1.8 3.2l-1.4 3.3h-7.3l-1.4 -3.3z" />
+            <path d="M5.7 8.2h10.1" />
+            <path d="M3 12.5h6.5l1.8 3.2l-1.4 3.3h-7.3l-1.4 -3.3z" />
+            <path d="M1.2 15.7h10.1" />
+            <path d="M12.5 12.5h6.5l1.8 3.2l-1.4 3.3h-7.3l-1.4 -3.3z" />
+            <path d="M10.7 15.7h10.1" />
+            <path d="M20 2l.6 1.6l1.6 .6l-1.6 .6l-.6 1.6l-.6 -1.6l-1.6 -.6l1.6 -.6z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title-row">
+            <span class="link-title" id="titleGoldTrigger">Live Gold Rates in Egypt</span>
+            <span class="live-pill live-pill--inline" id="goldTriggerBadge">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span id="goldTriggerBadgeText">Live</span>
+            </span>
+          </div>
+          <span class="link-subtitle" id="subtitleGoldTrigger">Buy & Sell Rates • Real-time Market</span>
+        </div>
+        <div class="link-chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </button>
+
+      <!-- 1. Google Maps (الموقع) -->
+      <a href="https://maps.app.goo.gl/bmKmoFWtbZMyiJHK7" target="_blank" rel="noopener noreferrer" class="link-card" data-link="maps">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5"/>
+            <path d="M9 4v13"/>
+            <path d="M15 7v5.5"/>
+            <path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z"/>
+            <path d="M19 18v.01"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleMaps">Store Location</span>
+          <span class="link-subtitle" id="subtitleMaps">📍 47 Cleopatra St, Salah El-Din Sq, Heliopolis</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 2. Instagram (انستجرام) -->
+      <a href="https://www.instagram.com/luxorjewellery.eg/" target="_blank" rel="noopener noreferrer" class="link-card" data-link="instagram">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"/>
+            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+            <path d="M16.5 7.5l0 .01"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleInstagram">Instagram</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 3. Facebook (الفيسبوك) -->
+      <a href="https://www.facebook.com/oval.jewellery?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="link-card" data-link="facebook">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleFacebook">Facebook</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 4. Telegram Channel (قناة التلجرام) -->
+      <a href="https://t.me/Ovaljewellwery" target="_blank" rel="noopener noreferrer" class="link-card" data-link="telegram">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleTelegram">Telegram Channel</span>
+          <span class="link-subtitle" id="subtitleTelegram">Live daily gold & silver rates</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 5. TikTok (التيكتوك) -->
+      <a href="https://www.tiktok.com/@luxorjewellery.eg?lang=ar" target="_blank" rel="noopener noreferrer" class="link-card" data-link="tiktok">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.002 6.002 0 0 0 4.917 4.917z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleTiktok">TikTok</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 6. WhatsApp — Mahmoud (واتساب محمود) -->
+      <a href="https://wa.me/201018780830" target="_blank" rel="noopener noreferrer" class="link-card" data-link="whatsapp1">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleWa1">WhatsApp — Mahmoud</span>
+          <span class="link-subtitle phone-ltr">01018780830</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 7. WhatsApp — Hossam (واتساب حسام) -->
+      <a href="https://wa.me/201007485585" target="_blank" rel="noopener noreferrer" class="link-card" data-link="whatsapp2">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleWa2">WhatsApp — Hossam</span>
+          <span class="link-subtitle phone-ltr">01007485585</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 8. WhatsApp Channel (قناة واتساب) -->
+      <a href="https://whatsapp.com/channel/0029VaDlshU2P59jNmXzFy3g" target="_blank" rel="noopener noreferrer" class="link-card" data-link="channel">
+        <span class="community-badge--channel" style="display:none;"></span>
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M17.802 17.292s.071 -.527 .595 -.781c.572 -.279 1.39 -.595 2.128 -1.575c.799 -1.06 1.475 -2.35 1.475 -4.936c0 -4.418 -3.582 -8 -8 -8s-8 3.582 -8 8c0 4.418 3.582 8 8 8c1.244 0 2.413 -.283 3.454 -.787l3.346 1.787l-.998 -1.708z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleChannel">WhatsApp Channel</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 9. WhatsApp Group (Community) (جروب واتساب) -->
+      <a href="https://chat.whatsapp.com/Kug2FhxW8iFCw8tG0crjMT" target="_blank" rel="noopener noreferrer" class="link-card" data-link="group">
+        <span class="community-badge--group" style="display:none;"></span>
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+            <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"/>
+            <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+            <path d="M17 10h2a2 2 0 0 1 2 2v1"/>
+            <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+            <path d="M3 13v-1a2 2 0 0 1 2 -2h2"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleGroup">WhatsApp Group</span>
+          <span class="link-subtitle" id="subtitleGroup">Join our discussions & community</span>
+        </div>
+        <button type="button" class="link-dots" aria-label="Menu" onclick="openShareModal(event)">
+          <svg viewBox="0 0 3 11"><path d="M1.33 10.67a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67zm0-4a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67z"/></svg>
+        </button>
+      </a>
+
+      <!-- 10. Our Services & Store Info Modal Trigger (عن المحل وخدماته) -->
+      <button type="button" class="link-card" id="servicesTriggerBtn" onclick="openServicesModal(event)" aria-haspopup="dialog" aria-expanded="false">
+        <div class="link-icon-left">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M6 5h12l3 5l-9 11l-9 -11z"/>
+            <path d="M10 10l2 -5l2 5"/>
+            <path d="M3 10h18"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <span class="link-title" id="titleServicesTrigger">About Us & Services</span>
+          <span class="link-subtitle" id="subtitleServicesTrigger">Gold • Diamonds • Silver • Watches</span>
+        </div>
+        <div class="link-chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </button>
+
+      <!-- Location placeholder -->
+      <div id="locationSection" style="display:none;"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="profile-footer">
+
+
+      <!-- Brand Identity Footer -->
+      <div class="footer-brand-crest">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="12,2 22,9 12,22 2,9"/>
+        </svg>
+        <span>LUXOR JEWELLERY</span>
+      </div>
+
+      <p class="footer-tags" id="footerTags">Gold • Diamonds • Silver • Watches</p>
+      <p class="footer-copy" id="footerCopy">© 2026 LUXOR JEWELLERY. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Share & Contact Modal -->
+  <div class="modal-backdrop" id="shareModal" onclick="closeShareModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeShareModal(event)" aria-label="Close">✕</button>
+      <h3 class="modal-title" id="modalShareTitle">Share LUXOR JEWELLERY</h3>
+      <p class="modal-desc" id="modalShareDesc">Scan QR code or copy link to share</p>
+
+      <div class="modal-qr-preview">
+        <img src="qr-codes/LUXOR_JEWELLERY_QR.png" alt="QR Code" id="modalQrImg" width="220" height="220" loading="lazy">
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="modal-action-btn" onclick="copyCurrentLink()">
+          🔗 <span id="modalCopyLinkText">نسخ الرابط / Copy Link</span>
+        </button>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <a href="tel:+201018780830" class="modal-action-btn" id="modalCallBtn">
+            📞 <span id="modalCallText">اتصال بمحمود</span>
+          </a>
+          <a href="https://wa.me/201018780830" target="_blank" rel="noopener noreferrer" class="modal-action-btn" id="modalWaBtn">
+            💬 <span id="modalWaText">واتساب محمود</span>
+          </a>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <a href="tel:+201007485585" class="modal-action-btn" id="modalCall2Btn">
+            📞 <span id="modalCall2Text">اتصال بحسام</span>
+          </a>
+          <a href="https://wa.me/201007485585" target="_blank" rel="noopener noreferrer" class="modal-action-btn" id="modalWa2Btn">
+            💬 <span id="modalWa2Text">واتساب حسام</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services & About Modal -->
+  <div class="modal-backdrop" id="servicesModal" onclick="closeServicesModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeServicesModal(event)" aria-label="Close">✕</button>
+      <h3 class="modal-title" id="servicesModalTitle">عن المحل — لوكسور للمجوهرات</h3>
+      <p class="modal-desc" id="servicesModalDesc" style="white-space: pre-line; line-height: 1.6; text-align: start; margin-bottom: 16px;">
+        مرحباً بكم في لوكسور للمجوهرات (LUXOR JEWELLERY)، وجهتكم الموثوقة للذهب والمجوهرات الراقية!
+
+        نختص في بيع وشراء الذهب والألماس الجديد والمستعمل بأفضل الأسعار وأنسب مصنعية. كما نشتري ونبيع الفضة ونقدم خدمات تقييم وشراء الساعات.
+
+        نقدم تشكيلة راقية تناسب مختلف الأذواق والمناسبات.
+        شكراً لثقتكم بنا، ويسعدنا دائماً خدمتكم.
+      </p>
+
+      <div class="modal-actions">
+        <div class="services-info-card">
+          <h4 class="services-info-heading" id="servicesListHeading">خدماتنا:</h4>
+          <ul class="services-info-list" id="servicesListUl">
+            <li class="services-info-item"><span class="icon">✨</span><span><strong>بيع وشراء الذهب</strong> (عيار 18 | 21 | 24 - جديد ومستعمل)</span></li>
+            <li class="services-info-item"><span class="icon">💎</span><span><strong>بيع وشراء الألماس</strong> (معتمد بأعلى معايير التقييم)</span></li>
+            <li class="services-info-item"><span class="icon">🥈</span><span><strong>بيع وشراء الفضة</strong> (تشكيلة عيار 925 وسبائك)</span></li>
+            <li class="services-info-item"><span class="icon">⌚</span><span><strong>تقييم وشراء الساعات</strong> (فحص وتقييم معتمد)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Live Gold Prices Dedicated Modal Page -->
+  <div class="modal-backdrop modal-backdrop--gold" id="goldModal" onclick="closeGoldModal(event)">
+    <div class="modal-box modal-box--gold" id="goldModalBox" onclick="event.stopPropagation()">
+      <!-- Card Header with Live Indicator & Action Buttons -->
+      <div class="gold-card-header">
+        <div class="gold-card-title-wrap">
+          <div class="gold-ingot-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="7.5,5 14,5 15.8,8.2 5.7,8.2" fill="rgba(255,255,255,0.45)"/>
+              <polygon points="5.7,8.2 15.8,8.2 14.4,11.5 7.1,11.5" fill="rgba(255,255,255,0.18)"/>
+              <polygon points="3,12.5 9.5,12.5 11.3,15.7 1.2,15.7" fill="rgba(255,255,255,0.45)"/>
+              <polygon points="1.2,15.7 11.3,15.7 9.9,19 2.6,19" fill="rgba(255,255,255,0.18)"/>
+              <polygon points="12.5,12.5 19,12.5 20.8,15.7 10.7,15.7" fill="rgba(255,255,255,0.45)"/>
+              <polygon points="10.7,15.7 20.8,15.7 19.4,19 12.1,19" fill="rgba(255,255,255,0.18)"/>
+              <path d="M20 2l.7 1.8l1.8 .7l-1.8 .7l-.7 1.8l-.7 -1.8l-1.8 -.7l1.8 -.7z" fill="#FFFFFF" stroke="none"/>
+            </svg>
+          </div>
+          <div class="gold-title-texts">
+            <div class="gold-main-title">
+              <h2 class="gold-heading" id="goldCardTitle">أسعار الذهب لحظة بلحظة</h2>
+              <span class="live-pill" id="livePill">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span id="livePillText">مباشر الآن</span>
+              </span>
+            </div>
+            <span class="gold-subtitle" id="goldCardSubtitle">سوق الصاغة في مصر • تحديث فوري</span>
+          </div>
+        </div>
+        <div class="gold-header-actions">
+          <button type="button" class="gold-refresh-btn" id="goldRefreshBtn" aria-label="تحديث أسعار الذهب الآن" title="تحديث الأسعار / Refresh">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-1.19"/>
+            </svg>
+          </button>
+          <button type="button" class="gold-close-btn modal-close" onclick="closeGoldModal(event)" aria-label="Close" title="إغلاق / Close">✕</button>
+        </div>
+      </div>
+
+        <!-- Buy / Sell Column Label Header -->
+        <div class="gold-col-headers">
+          <span class="col-caliber-lbl" id="colCaliberLbl">العيار</span>
+          <div class="col-prices-lbl-group">
+            <span class="col-buy-lbl" id="colBuyLbl">شراء من المحل</span>
+            <span class="col-sell-lbl" id="colSellLbl">بيع للمحل</span>
+          </div>
+        </div>
+
+        <!-- Primary Grid: All Calibers & Rates in exact order of goldbullioneg.com -->
+        <div class="gold-grid" id="goldPrimaryGrid">
+          <!-- 1. 24K Gold -->
+          <div class="gold-row" data-id="24k">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-24k">24K</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLbl24">عيار 24</span>
+                <span class="caliber-change text-success" id="goldChg24">+0 ج ▲</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuy24">7,046</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSell24">7,023</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. 22K Gold -->
+          <div class="gold-row" data-id="22k">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-sub">22K</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLbl22">عيار 22</span>
+                <span class="caliber-change text-success" id="goldChg22">+0 ج ▲</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuy22">6,459</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSell22">6,438</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 21K Gold -->
+          <div class="gold-row" data-id="21k">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-21k">21K</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLbl21">عيار 21</span>
+                <span class="caliber-change text-success" id="goldChg21">+0 ج ▲</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuy21">6,165</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSell21">6,145</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. 18K Gold -->
+          <div class="gold-row" data-id="18k">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-18k">18K</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLbl18">عيار 18</span>
+                <span class="caliber-change text-success" id="goldChg18">+0 ج ▲</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuy18">5,284</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSell18">5,267</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. 14K Gold -->
+          <div class="gold-row" data-id="14k">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-sub">14K</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLbl14">عيار 14</span>
+                <span class="caliber-change text-success" id="goldChg14">+0 ج ▲</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuy14">4,110</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSell14">4,096</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. USD Exchange Rate -->
+          <div class="gold-row" data-id="usd">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-sub">$</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLblUsd">الدولار</span>
+                <span class="caliber-change text-success" id="goldChgUsd">+0 ج ▲</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuyUsd">52.70</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSellUsd">52.60</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Gold Ounce (USD) -->
+          <div class="gold-row" data-id="ounce">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-sub">OZ</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLblOunce">الأونصة</span>
+                <span class="caliber-change text-muted" id="goldChgOunce">USD</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuyOunce">4,198.46</span>
+                <span class="val-currency">$</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSellOunce">4,197.96</span>
+                <span class="val-currency">$</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Gold Pound -->
+          <div class="gold-row gold-row--pound" data-id="pound">
+            <div class="gold-caliber-col">
+              <span class="caliber-tag tag-pound">🪙</span>
+              <div class="caliber-name-wrap">
+                <span class="caliber-name" id="goldLblPound">الجنيه الذهب</span>
+                <span class="caliber-change text-success" id="goldChgPound">+0 ج ▲</span>
+              </div>
+            </div>
+            <div class="gold-values-col">
+              <div class="val-box val-buy">
+                <span class="val-num" id="goldBuyPound">49,320</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+              <div class="val-box val-sell">
+                <span class="val-num" id="goldSellPound">49,160</span>
+                <span class="val-currency">ج.م</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Footer (Timestamp & Source attribution) -->
+        <div class="gold-card-footer">
+          <span class="gold-timestamp" id="goldTimestamp">
+            <span class="time-clock-icon" aria-hidden="true">⏱️</span>
+            <span id="goldTimeText">آخر تحديث: منذ لحظات</span>
+          </span>
+          <a href="https://goldbullioneg.com/%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%87%D8%A8/" target="_blank" rel="noopener noreferrer" class="gold-source-link" id="goldSourceLink" title="Gold Bullion Egypt">
+            <span id="goldSourceText">المصدر: Gold Bullion</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">Link copied to clipboard!</div>
+
+  <!-- Scripts -->
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
