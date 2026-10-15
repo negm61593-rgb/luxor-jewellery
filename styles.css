@@ -31,12 +31,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
-button, input, select, textarea {
+button, input, select, textarea, a, .link-card, .social-icon-btn, .topbar-btn {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  touch-action: manipulation;
 }
 
 html {
@@ -116,7 +118,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 16px;
+  padding: max(14px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 12px max(16px, env(safe-area-inset-left));
   pointer-events: none;
   direction: ltr !important; /* Keep buttons fixed in physical positions */
 }
@@ -128,23 +130,23 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  height: 38px;
+  height: 42px;
   border-radius: 9999px;
-  background: rgba(30, 20, 6, 0.68);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(30, 20, 6, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 235, 170, 0.45);
   color: #FFFFFF;
   cursor: pointer;
   transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
-  padding: 0 12px;
+  padding: 0 14px;
   font-size: 13px;
   font-weight: 600;
   box-shadow: 0 4px 16px rgba(25, 16, 4, 0.4);
 }
 
 .topbar-btn:active {
-  transform: scale(0.96);
+  transform: scale(0.92);
 }
 
 .topbar-btn:hover {
@@ -156,20 +158,22 @@ body::before {
 
 /* Specific styling for Share button */
 #shareBtn {
-  width: 38px;
-  min-width: 38px;
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
   padding: 0;
   border-radius: 50%;
 }
 
 #shareBtn svg {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   fill: #FFFFFF;
 }
 
 /* --- Language Toggle Enhanced Segmented Design --- */
 .lang-toggle-btn {
+  height: 42px;
   padding: 3px 6px 3px 10px;
   gap: 8px;
   direction: ltr !important; /* Keep internal globe icon and segments stable */
@@ -317,6 +321,12 @@ body::before {
   box-shadow: 0 8px 24px rgba(25, 14, 3, 0.5), 0 0 18px rgba(222, 166, 55, 0.35);
 }
 
+.social-icon-btn:active {
+  transform: scale(0.91);
+  background: rgba(68, 42, 10, 0.95);
+  border-color: #FFE6A0;
+}
+
 .social-icon-btn svg {
   width: 22px;
   height: 22px;
@@ -361,7 +371,10 @@ body::before {
 }
 
 .link-card:active {
-  transform: scale(0.99) translateY(0);
+  transform: scale(0.978);
+  background: linear-gradient(135deg, rgba(56, 36, 12, 0.98) 0%, rgba(32, 20, 6, 1) 100%);
+  border-color: rgba(255, 230, 160, 0.9);
+  box-shadow: 0 4px 16px rgba(18, 10, 2, 0.6), 0 0 16px rgba(222, 166, 55, 0.3);
 }
 
 /* Icon on the left */
@@ -448,7 +461,7 @@ body::before {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 24px 16px 36px;
+  padding: 24px 16px max(36px, calc(20px + env(safe-area-inset-bottom)));
   margin-top: auto;
 }
 
@@ -688,6 +701,7 @@ body.modal-open {
   justify-content: center;
   gap: 10px;
   width: 100%;
+  min-height: 46px;
   padding: 12px 16px;
   border-radius: 12px;
   background: var(--button-style-background);
@@ -698,12 +712,20 @@ body.modal-open {
   border: 1px solid rgba(255, 228, 153, 0.38);
   cursor: pointer;
   transition: all 0.2s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .modal-action-btn:hover {
   background: var(--button-style-background-hover);
   border-color: rgba(255, 238, 179, 0.75);
   transform: translateY(-1px);
+}
+
+.modal-action-btn:active {
+  transform: scale(0.965);
+  background: var(--button-style-background-hover);
+  border-color: rgba(255, 238, 179, 0.95);
 }
 
 .modal-qr-preview {
@@ -1677,20 +1699,83 @@ html[dir="rtl"] .hours-arrow {
   transform: scale(1.08);
 }
 
-@media (max-width: 560px) {
-  .modal-backdrop--gold {
+/* --- Mobile Bottom Sheets for All Modals & Safe Area Optimization (< 576px) --- */
+@media (max-width: 575px) {
+  .modal-backdrop {
     align-items: flex-end;
     padding: 0;
   }
 
-  .modal-box--gold {
+  .modal-box {
     width: 100%;
     max-width: 100%;
-    max-height: 92vh;
+    max-height: 90vh;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 18px 12px 24px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    border-bottom: none;
+    padding: 16px 18px max(26px, calc(18px + env(safe-area-inset-bottom)));
+    transform: translateY(100%);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .modal-box::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 4.5px;
+    border-radius: 9999px;
+    background: rgba(255, 230, 160, 0.35);
+    margin: 0 auto 16px;
+  }
+
+  .modal-backdrop.active .modal-box {
+    transform: translateY(0);
+  }
+
+  .modal-box--gold {
+    max-height: 92vh;
+    padding: 18px 12px max(26px, calc(18px + env(safe-area-inset-bottom)));
     background: linear-gradient(175deg, #281704 0%, #120A02 100%);
+  }
+
+  .modal-desc {
+    padding: 0 4px;
+  }
+}
+
+/* --- Ultra-Compact Smartphone Optimization (<= 380px e.g. iPhone SE, Galaxy A) --- */
+@media (max-width: 380px) {
+  .profile-title {
+    font-size: 1.42rem;
+  }
+
+  .profile-bio {
+    font-size: 13.5px;
+    padding: 0 6px;
+  }
+
+  .social-icons-row {
+    gap: 8px;
+  }
+
+  .social-icon-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .link-card {
+    min-height: 58px;
+    padding: 12px 42px;
+  }
+
+  .link-title {
+    font-size: 14.5px;
+  }
+
+  .link-subtitle {
+    font-size: 11.5px;
   }
 }
 
