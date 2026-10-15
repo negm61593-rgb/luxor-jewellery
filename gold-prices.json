@@ -77,20 +77,20 @@
       "isPrimary": false
     },
     {
-      "id": "21k",
-      "nameAr": "عيار 21",
-      "nameEn": "21K Gold",
-      "buy": 4158.51,
-      "sell": 4158.01,
-      "currency": "EGP",
+      "id": "ounce",
+      "nameAr": "الأونصة",
+      "nameEn": "Gold Ounce",
+      "buy": 4198.46,
+      "sell": 4197.96,
+      "currency": "USD",
       "change": "+13.21 $",
       "changeDir": "up",
-      "isPrimary": true
+      "isPrimary": false
     },
     {
-      "id": "24k",
-      "nameAr": "عيار 24",
-      "nameEn": "24K Gold",
+      "id": "pound",
+      "nameAr": "الجنيه الذهب",
+      "nameEn": "Gold Pound",
       "buy": 49600,
       "sell": 49360,
       "currency": "EGP",

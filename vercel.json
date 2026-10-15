@@ -15,19 +15,25 @@
     {
       "source": "/(|index.html)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
-      "source": "/(styles.css|app.js|config.js|avatar.webp|avatar.jpg|favicon.svg|icon-192.png|icon-512.png|icon-maskable-512.png)",
+      "source": "/(styles.css|app.js|config.js)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, stale-while-revalidate=604800, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=60, stale-while-revalidate=120" }
+      ]
+    },
+    {
+      "source": "/(avatar.webp|avatar.jpg|favicon.svg|icon-192.png|icon-512.png|icon-maskable-512.png)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/qr-codes/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=2592000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=2592000" }
       ]
     },
     {
