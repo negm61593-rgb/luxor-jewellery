@@ -1,11 +1,13 @@
 // LUXOR JEWELLERY Service Worker — Ultra-High Performance PWA Cache (Instant Load)
-const CACHE_NAME = 'luxor-v5-mobile';
+const CACHE_NAME = 'luxor-v6-ultra';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
+  'styles.css?v=6.0',
   'styles.css',
-  'styles.css?v=mobile',
+  'app.js?v=6.0',
   'app.js',
+  'config.js?v=6.0',
   'config.js',
   'avatar.webp',
   'avatar.jpg',
@@ -16,6 +18,12 @@ const ASSETS_TO_CACHE = [
   'icon-maskable-512.png',
   'gold-prices.json'
 ];
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

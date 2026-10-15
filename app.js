@@ -351,16 +351,54 @@
   }
 
   // ------------------------------------------------------------
-  // Native PWA Registration (Silent background service worker)
+  // Native PWA Registration & Auto Cache Purging (Instant Mobile Turbo)
   // ------------------------------------------------------------
   function initPwa() {
+    try {
+      const CURRENT_VER = 'luxor-v6.0-ultra';
+      if (localStorage.getItem('luxor_cache_ver') !== CURRENT_VER) {
+        localStorage.setItem('luxor_cache_ver', CURRENT_VER);
+        if ('caches' in window) {
+          caches.keys().then(function(names) {
+            names.forEach(function(name) {
+              caches.delete(name);
+            });
+          });
+        }
+      }
+    } catch (e) {}
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('./sw.js')
-          .then(function () {})
+          .then(function (reg) {
+            if (!reg) return;
+            reg.update();
+            if (reg.waiting) {
+              reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            }
+            reg.addEventListener('updatefound', function () {
+              const newWorker = reg.installing;
+              if (newWorker) {
+                newWorker.addEventListener('statechange', function () {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    newWorker.postMessage({ type: 'SKIP_WAITING' });
+                  }
+                });
+              }
+            });
+          })
           .catch(function (err) {
-            console.log('SW Registration Note:', err);
+            console.log('SW Note:', err);
           });
+
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+          }
+        });
       });
     }
   }
