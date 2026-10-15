@@ -9,10 +9,10 @@
   --luxor-gold: #B3873D;
   --luxor-gold-light: #DEA637;
   --luxor-gold-dark: #8D5812;
-  --profileBackground: #0A0703;
-  --desktop-frame-color: #070502;
-  --button-style-background: rgba(46, 31, 14, 0.85);
-  --button-style-background-hover: rgba(64, 43, 19, 0.95);
+  --profileBackground: #B3873D;
+  --desktop-frame-color: #241604;
+  --button-style-background: rgba(34, 21, 5, 0.88);
+  --button-style-background-hover: rgba(52, 33, 9, 0.95);
   --button-style-text: #FFFFFF;
   --button-style-radius: 14px;
   --bodyText: #FFFFFF;
@@ -23,8 +23,8 @@
   --link-gap: 14px;
   --profile-container-desktop-width: 580px;
 
-  --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-ar: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-en: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-ar: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif;
 }
 
 *, *::before, *::after {
@@ -53,8 +53,7 @@ html[lang="ar"], html[dir="rtl"] {
 
 body {
   min-height: 100vh;
-  min-height: 100dvh;
-  background: radial-gradient(ellipse at 50% 0%, #221507 0%, #0D0903 55%, #050301 100%);
+  background: radial-gradient(ellipse at 50% 20%, #5E390C 0%, #2A1804 55%, #150C02 100%);
   background-color: var(--desktop-frame-color);
   overflow-x: hidden;
   position: relative;
@@ -69,134 +68,32 @@ body::before {
   transform: translateX(-50%);
   width: min(100vw, 720px);
   height: 560px;
-  background: radial-gradient(circle, rgba(222, 166, 55, 0.28) 0%, rgba(179, 135, 61, 0.1) 45%, transparent 72%);
+  background: radial-gradient(circle, rgba(222, 166, 55, 0.35) 0%, rgba(179, 135, 61, 0.15) 45%, transparent 72%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* --- Profile Container (Desktop Frame) — Living Royal 24K Gold Aurora & Noir --- */
+/* --- Profile Container (Desktop Frame) — Exact Luxor Logo Gold Canvas --- */
 .profile-wrapper {
   position: relative;
   width: 100%;
   max-width: var(--profile-container-desktop-width);
   margin: 0 auto;
   min-height: 100vh;
-  min-height: 100dvh;
-  background-color: var(--profileBackground);
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(255, 235, 170, 0.38) 0%, rgba(222, 166, 55, 0.2) 32%, transparent 65%),
+    linear-gradient(175deg, 
+      #8D5812 0%, 
+      #B3873D 20%, 
+      #DEA637 45%, 
+      #B3873D 65%, 
+      #8D5812 86%, 
+      #5E3300 100%
+    );
+  background-color: var(--luxor-gold);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Living Liquid Gold Aurora Mesh */
-.luxury-aurora {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.aurora-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(65px);
-  will-change: transform, opacity;
-  pointer-events: none;
-}
-
-.aurora-blob--crown {
-  top: -70px;
-  left: 50%;
-  width: 420px;
-  height: 380px;
-  transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(255, 215, 110, 0.62) 0%, rgba(222, 166, 55, 0.35) 45%, rgba(141, 88, 18, 0.12) 70%, transparent 85%);
-  animation: crownPulse 9s ease-in-out infinite alternate;
-}
-
-.aurora-blob--1 {
-  top: 25%;
-  right: -90px;
-  width: 340px;
-  height: 340px;
-  background: radial-gradient(circle, rgba(222, 166, 55, 0.44) 0%, rgba(179, 135, 61, 0.2) 50%, transparent 75%);
-  animation: floatBlob1 15s ease-in-out infinite alternate;
-}
-
-.aurora-blob--2 {
-  bottom: 22%;
-  left: -90px;
-  width: 360px;
-  height: 360px;
-  background: radial-gradient(circle, rgba(254, 230, 168, 0.4) 0%, rgba(141, 88, 18, 0.22) 55%, transparent 75%);
-  animation: floatBlob2 19s ease-in-out infinite alternate;
-}
-
-.aurora-blob--base {
-  bottom: -90px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 440px;
-  height: 280px;
-  background: radial-gradient(ellipse at center, rgba(200, 145, 45, 0.45) 0%, rgba(94, 57, 12, 0.2) 60%, transparent 80%);
-  animation: basePulse 11s ease-in-out infinite alternate;
-}
-
-@keyframes crownPulse {
-  0% { transform: translateX(-50%) scale(1); opacity: 0.65; }
-  50% { transform: translateX(-48%) scale(1.12); opacity: 0.9; }
-  100% { transform: translateX(-52%) scale(0.96); opacity: 0.62; }
-}
-
-@keyframes floatBlob1 {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(-60px, 80px, 0) scale(1.22); }
-  100% { transform: translate3d(-30px, -40px, 0) scale(0.92); }
-}
-
-@keyframes floatBlob2 {
-  0% { transform: translate3d(0, 0, 0) scale(0.95); }
-  50% { transform: translate3d(70px, -60px, 0) scale(1.25); }
-  100% { transform: translate3d(20px, 50px, 0) scale(1.05); }
-}
-
-@keyframes basePulse {
-  0% { opacity: 0.55; transform: translateX(-50%) scale(1); }
-  100% { opacity: 0.85; transform: translateX(-50%) scale(1.16); }
-}
-
-/* Stardust & Diamond Sparkles Canvas */
-.luxury-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Haute Joaillerie Luxury Guilloché Silk Pattern */
-.profile-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(30deg, rgba(222, 166, 55, 0.035) 12%, transparent 12.5%, transparent 87%, rgba(222, 166, 55, 0.035) 87.5%),
-    linear-gradient(150deg, rgba(222, 166, 55, 0.035) 12%, transparent 12.5%, transparent 87%, rgba(222, 166, 55, 0.035) 87.5%),
-    linear-gradient(60deg, rgba(222, 166, 55, 0.022) 25%, transparent 25.5%, transparent 75%, rgba(222, 166, 55, 0.022) 75%),
-    linear-gradient(120deg, rgba(222, 166, 55, 0.022) 25%, transparent 25.5%, transparent 75%, rgba(222, 166, 55, 0.022) 75%);
-  background-size: 50px 88px;
-  background-position: 0 0, 0 0, 25px 44px, 25px 44px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.9;
-}
-
-.profile-wrapper > *:not(.luxury-aurora):not(.luxury-canvas) {
-  position: relative;
   z-index: 1;
 }
 
@@ -206,8 +103,8 @@ body::before {
     margin-bottom: 24px;
     min-height: calc(100vh - 42px);
     border-radius: 28px;
-    border: 1.5px solid rgba(222, 166, 55, 0.55);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 50px rgba(222, 166, 55, 0.2);
+    border: 1.5px solid rgba(222, 166, 55, 0.45);
+    box-shadow: 0 25px 65px rgba(20, 12, 2, 0.85), 0 0 45px rgba(179, 135, 61, 0.25);
   }
 }
 
@@ -440,57 +337,31 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 64px;
-  background: linear-gradient(135deg, rgba(38, 25, 11, 0.76) 0%, rgba(20, 13, 5, 0.86) 100%);
+  min-height: 62px;
+  background: linear-gradient(135deg, rgba(32, 20, 5, 0.88) 0%, rgba(20, 12, 3, 0.94) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1.5px solid rgba(222, 166, 55, 0.48);
+  border: 1px solid rgba(222, 166, 55, 0.42);
   color: var(--button-style-text);
   border-radius: var(--button-style-radius);
   text-decoration: none;
   padding: 14px 48px;
-  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: all 0.24s cubic-bezier(0.2, 0.8, 0.2, 1);
   user-select: none;
   cursor: pointer;
   width: 100%;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 235, 175, 0.32);
-  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(28, 16, 3, 0.38), inset 0 1px 0 rgba(255, 230, 160, 0.18);
 }
 
 .link-card:hover {
-  background: linear-gradient(135deg, rgba(58, 38, 16, 0.88) 0%, rgba(30, 20, 8, 0.94) 100%);
-  border-color: rgba(255, 230, 160, 0.92);
+  background: linear-gradient(135deg, rgba(48, 30, 8, 0.95) 0%, rgba(28, 17, 4, 0.98) 100%);
+  border-color: rgba(255, 220, 130, 0.75);
   transform: translateY(-2px);
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.8), 0 0 30px rgba(222, 166, 55, 0.35), inset 0 1px 0 rgba(255, 248, 210, 0.5);
+  box-shadow: 0 12px 32px rgba(25, 14, 3, 0.5), 0 0 24px rgba(222, 166, 55, 0.22), inset 0 1px 0 rgba(255, 240, 180, 0.25);
 }
 
 .link-card:active {
   transform: scale(0.99) translateY(0);
-}
-
-/* Living Shimmer Light Bar across Cards */
-.link-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -140%;
-  width: 55%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 235, 175, 0.16), rgba(255, 255, 255, 0.26), rgba(255, 235, 175, 0.16), transparent);
-  transform: skewX(-25deg);
-  animation: cardShimmerSweep 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  pointer-events: none;
-  border-radius: inherit;
-}
-
-.link-card--gold::after { animation-delay: 1.2s; }
-.links-container > .link-card:nth-of-type(2)::after { animation-delay: 3.2s; }
-.links-container > .link-card:nth-of-type(3)::after { animation-delay: 4.8s; }
-
-@keyframes cardShimmerSweep {
-  0%, 45% { left: -140%; opacity: 0; }
-  55% { opacity: 1; }
-  75%, 100% { left: 190%; opacity: 0; }
 }
 
 /* Icon on the left */
@@ -1736,14 +1607,14 @@ html[dir="rtl"] .hours-arrow {
 
 /* --- Live Gold Prices Link Card Trigger & Dedicated Modal Page --- */
 .link-card--gold {
-  border-color: rgba(255, 225, 130, 0.78);
-  background: linear-gradient(135deg, rgba(72, 48, 18, 0.94) 0%, rgba(40, 26, 10, 0.98) 100%);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 32px rgba(222, 166, 55, 0.32), inset 0 1px 0 rgba(255, 245, 190, 0.55);
+  border-color: rgba(222, 166, 55, 0.55);
+  background: linear-gradient(135deg, rgba(42, 26, 6, 0.92) 0%, rgba(22, 13, 3, 0.96) 100%);
+  box-shadow: 0 8px 24px rgba(28, 16, 3, 0.45), 0 0 16px rgba(222, 166, 55, 0.12), inset 0 1px 0 rgba(255, 230, 160, 0.25);
 }
 
 .link-card--gold:hover {
-  border-color: #FFE6A8;
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.8), 0 0 40px rgba(222, 166, 55, 0.45), inset 0 1px 0 #FFF8E7;
+  border-color: rgba(254, 230, 168, 0.85);
+  box-shadow: 0 12px 32px rgba(25, 14, 3, 0.55), 0 0 28px rgba(222, 166, 55, 0.3), inset 0 1px 0 rgba(255, 240, 180, 0.35);
 }
 
 .link-title-row {
@@ -1820,14 +1691,6 @@ html[dir="rtl"] .hours-arrow {
     border-bottom-right-radius: 0;
     padding: 18px 12px 24px;
     background: linear-gradient(175deg, #281704 0%, #120A02 100%);
-  }
-}
-
-/* Accessibility: Respect Reduced Motion Preferences */
-@media (prefers-reduced-motion: reduce) {
-  .aurora-blob,
-  .link-card::after {
-    animation: none !important;
   }
 }
 

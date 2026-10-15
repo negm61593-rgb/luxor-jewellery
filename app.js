@@ -7,119 +7,6 @@
   'use strict';
 
   let currentLang = 'en';
-  let latestGoldData = null;
-
-  // ------------------------------------------------------------
-  // Modal Handlers — Defined immediately so inline onclick always works
-  // ------------------------------------------------------------
-  function checkModalsClosed() {
-    const active = document.querySelector('.modal-backdrop.active');
-    if (!active) {
-      document.body.classList.remove('modal-open');
-    }
-  }
-
-  window.openShareModal = function (e) {
-    if (e) { e.preventDefault(); e.stopPropagation(); }
-    const m = document.getElementById('shareModal');
-    if (m) {
-      m.classList.add('active');
-      document.body.classList.add('modal-open');
-    }
-  };
-
-  window.closeShareModal = function (e) {
-    if (e && e.target !== e.currentTarget && !e.target.closest('.modal-close')) return;
-    const m = document.getElementById('shareModal');
-    if (m) {
-      m.classList.remove('active');
-      checkModalsClosed();
-    }
-  };
-
-  window.openServicesModal = function (e) {
-    if (e) { e.preventDefault(); e.stopPropagation(); }
-    const m = document.getElementById('servicesModal');
-    if (m) {
-      m.classList.add('active');
-      document.body.classList.add('modal-open');
-    }
-  };
-
-  window.closeServicesModal = function (e) {
-    if (e && e.target !== e.currentTarget && !e.target.closest('.modal-close')) return;
-    const m = document.getElementById('servicesModal');
-    if (m) {
-      m.classList.remove('active');
-      checkModalsClosed();
-    }
-  };
-
-  window.openGoldModal = function (e) {
-    if (e) { e.preventDefault(); e.stopPropagation(); }
-    const m = document.getElementById('goldModal');
-    if (m) {
-      m.classList.add('active');
-      document.body.classList.add('modal-open');
-      const trigger = document.getElementById('goldRatesTriggerBtn');
-      if (trigger) trigger.setAttribute('aria-expanded', 'true');
-      if (window.location.hash !== '#gold' && window.location.hash !== '#gold-prices') {
-        try {
-          history.pushState({ modal: 'gold' }, '', '#gold');
-        } catch (err) {}
-      }
-    }
-  };
-
-  window.closeGoldModal = function (e) {
-    if (e && e.target !== e.currentTarget && !e.target.closest('.modal-close')) return;
-    const m = document.getElementById('goldModal');
-    if (m) {
-      m.classList.remove('active');
-      checkModalsClosed();
-      const trigger = document.getElementById('goldRatesTriggerBtn');
-      if (trigger) trigger.setAttribute('aria-expanded', 'false');
-      if (window.location.hash === '#gold' || window.location.hash === '#gold-prices') {
-        try {
-          history.replaceState(null, '', window.location.pathname + window.location.search);
-        } catch (err) {}
-      }
-    }
-  };
-
-  // ------------------------------------------------------------
-  // Clipboard Copy & Toast Notice
-  // ------------------------------------------------------------
-  window.copyCurrentLink = function () {
-    const url = window.location.href;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(showToast).catch(fallbackCopy);
-    } else {
-      fallbackCopy();
-    }
-
-    function fallbackCopy() {
-      const input = document.createElement('input');
-      input.value = url;
-      document.body.appendChild(input);
-      input.select();
-      try {
-        document.execCommand('copy');
-        showToast();
-      } catch (err) {}
-      document.body.removeChild(input);
-    }
-  };
-
-  function showToast() {
-    const toast = document.getElementById('toastNotice');
-    if (!toast) return;
-    toast.textContent = currentLang === 'ar' ? 'تم نسخ الرابط بنجاح!' : 'Link copied to clipboard!';
-    toast.classList.add('show');
-    setTimeout(function () {
-      toast.classList.remove('show');
-    }, 2400);
-  }
 
   // Wait for DOM ready
   document.addEventListener('DOMContentLoaded', init);
@@ -144,7 +31,6 @@
     setupModals();
     initGoldPrices();
     initPwa();
-    initLuxuryAnimatedCanvas();
   }
 
   // ------------------------------------------------------------
@@ -262,6 +148,7 @@
     setText('goldSourceText', isAr ? 'المصدر: Gold Bullion' : 'Source: Gold Bullion');
     setAttr('goldRefreshBtn', 'title', isAr ? 'تحديث الأسعار الآن' : 'Refresh Gold Rates');
     setAttr('goldRefreshBtn', 'aria-label', isAr ? 'تحديث أسعار الذهب الآن' : 'Refresh Gold Rates Now');
+    updateGoldToggleBtnText(isAr);
     updateGoldTimestampText(isAr);
     renderGoldPricesData(latestGoldData);
 
@@ -335,9 +222,89 @@
   }
 
   // ------------------------------------------------------------
-  // Modal Event Listeners (Keyboard & History State)
+  // ------------------------------------------------------------
+  // Modal Handlers (Share, Services, Live Gold Rates Page)
   // ------------------------------------------------------------
   function setupModals() {
+    function checkModalsClosed() {
+      const active = document.querySelector('.modal-backdrop.active');
+      if (!active) {
+        document.body.classList.remove('modal-open');
+      }
+    }
+
+    window.openShareModal = function (e) {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      const qrImg = document.getElementById('modalQrImg');
+      if (qrImg && qrImg.dataset.src && qrImg.src !== qrImg.dataset.src) {
+        qrImg.src = qrImg.dataset.src;
+      }
+      const m = document.getElementById('shareModal');
+      if (m) {
+        m.classList.add('active');
+        document.body.classList.add('modal-open');
+      }
+    };
+
+    window.closeShareModal = function (e) {
+      if (e && e.target !== e.currentTarget && !e.target.closest('.modal-close')) return;
+      const m = document.getElementById('shareModal');
+      if (m) {
+        m.classList.remove('active');
+        checkModalsClosed();
+      }
+    };
+
+    window.openServicesModal = function (e) {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      const m = document.getElementById('servicesModal');
+      if (m) {
+        m.classList.add('active');
+        document.body.classList.add('modal-open');
+      }
+    };
+
+    window.closeServicesModal = function (e) {
+      if (e && e.target !== e.currentTarget && !e.target.closest('.modal-close')) return;
+      const m = document.getElementById('servicesModal');
+      if (m) {
+        m.classList.remove('active');
+        checkModalsClosed();
+      }
+    };
+
+    window.openGoldModal = function (e) {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      const m = document.getElementById('goldModal');
+      if (m) {
+        m.classList.add('active');
+        document.body.classList.add('modal-open');
+        const trigger = document.getElementById('goldRatesTriggerBtn');
+        if (trigger) trigger.setAttribute('aria-expanded', 'true');
+        if (window.location.hash !== '#gold' && window.location.hash !== '#gold-prices') {
+          try {
+            history.pushState({ modal: 'gold' }, '', '#gold');
+          } catch (err) {}
+        }
+      }
+    };
+
+    window.closeGoldModal = function (e) {
+      if (e && e.target !== e.currentTarget && !e.target.closest('.modal-close')) return;
+      const m = document.getElementById('goldModal');
+      if (m) {
+        m.classList.remove('active');
+        checkModalsClosed();
+        const trigger = document.getElementById('goldRatesTriggerBtn');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        if (window.location.hash === '#gold' || window.location.hash === '#gold-prices') {
+          try {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+          } catch (err) {}
+        }
+      }
+    };
+
     // Keyboard Escape to dismiss any modal
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' || e.key === 'Esc') {
@@ -399,8 +366,45 @@
   }
 
   // ------------------------------------------------------------
+  // Clipboard Copy & Toast Notice
+  // ------------------------------------------------------------
+  window.copyCurrentLink = function () {
+    const url = window.location.href;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(showToast).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+
+    function fallbackCopy() {
+      const input = document.createElement('input');
+      input.value = url;
+      document.body.appendChild(input);
+      input.select();
+      try {
+        document.execCommand('copy');
+        showToast();
+      } catch (err) {}
+      document.body.removeChild(input);
+    }
+  };
+
+  function showToast() {
+    const toast = document.getElementById('toastNotice');
+    if (!toast) return;
+    toast.textContent = currentLang === 'ar' ? 'تم نسخ الرابط بنجاح!' : 'Link copied to clipboard!';
+    toast.classList.add('show');
+    setTimeout(function () {
+      toast.classList.remove('show');
+    }, 2400);
+  }
+
+  // ------------------------------------------------------------
   // Live Gold Prices Controller (لحظة بلحظة)
   // ------------------------------------------------------------
+  let latestGoldData = null;
+  let isGoldDrawerOpen = false;
+
   function initGoldPrices() {
     const refreshBtn = document.getElementById('goldRefreshBtn');
     if (refreshBtn) {
@@ -414,11 +418,35 @@
       });
     }
 
+    const drawerBtn = document.getElementById('goldToggleDrawerBtn');
+    if (drawerBtn) {
+      drawerBtn.addEventListener('click', function () {
+        isGoldDrawerOpen = !isGoldDrawerOpen;
+        const drawer = document.getElementById('goldDetailsDrawer');
+        if (drawer) {
+          drawer.style.display = isGoldDrawerOpen ? 'flex' : 'none';
+        }
+        drawerBtn.setAttribute('aria-expanded', isGoldDrawerOpen ? 'true' : 'false');
+        updateGoldToggleBtnText(currentLang === 'ar');
+      });
+    }
+
     // Initial fetch
     fetchLiveGoldPrices();
 
     // Auto-refresh every 60 seconds
     setInterval(fetchLiveGoldPrices, 60000);
+  }
+
+  function updateGoldToggleBtnText(isAr) {
+    const toggleText = document.getElementById('goldToggleText');
+    if (toggleText) {
+      if (isGoldDrawerOpen) {
+        toggleText.textContent = isAr ? 'إخفاء باقي الأعيرة' : 'Hide Other Calibers';
+      } else {
+        toggleText.textContent = isAr ? 'عرض باقي الأعيرة والأسعار' : 'View All Calibers & Rates';
+      }
+    }
   }
 
   function updateGoldTimestampText(isAr) {
@@ -436,12 +464,29 @@
     const apiUrl = '/api/gold-prices';
     const fallbackUrl = './gold-prices.json';
 
+    // Instant render from session storage if recent (< 60s)
+    try {
+      const cached = sessionStorage.getItem('luxor_gold_cache');
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (parsed && (Date.now() - (parsed._cachedAt || 0) < 60000)) {
+          handleGoldDataSuccess(parsed);
+          if (doneCallback) doneCallback();
+          return;
+        }
+      }
+    } catch (e) {}
+
     fetch(apiUrl)
       .then(function (res) {
         if (!res.ok) throw new Error('API status ' + res.status);
         return res.json();
       })
       .then(function (data) {
+        try {
+          data._cachedAt = Date.now();
+          sessionStorage.setItem('luxor_gold_cache', JSON.stringify(data));
+        } catch (e) {}
         handleGoldDataSuccess(data);
         if (doneCallback) doneCallback();
       })
@@ -464,15 +509,6 @@
     if (!data || !data.items || !Array.isArray(data.items)) return;
     latestGoldData = data;
     renderGoldPricesData(data);
-  }
-
-  function formatRate(val, isDec) {
-    const num = Number(val);
-    if (isNaN(num)) return val || '—';
-    if (isDec || (num % 1 !== 0)) {
-      return num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    }
-    return num.toLocaleString('en-US');
   }
 
   function renderGoldPricesData(data) {
@@ -517,9 +553,8 @@
       const sellEl = document.getElementById('goldSell' + capitalizeId(item.id));
       const chgEl = document.getElementById('goldChg' + capitalizeId(item.id));
 
-      const isDec = item.id === 'usd' || item.id === 'ounce';
-      if (buyEl) buyEl.textContent = formatRate(item.buy, isDec);
-      if (sellEl) sellEl.textContent = formatRate(item.sell, isDec);
+      if (buyEl) buyEl.textContent = Number(item.buy).toLocaleString('en-US');
+      if (sellEl) sellEl.textContent = Number(item.sell).toLocaleString('en-US');
 
       if (chgEl && item.change) {
         let chgText = item.change;
@@ -544,163 +579,6 @@
     if (id === 'ounce') return 'Ounce';
     if (id === 'usd') return 'Usd';
     return id.charAt(0).toUpperCase() + id.slice(1);
-  }
-
-  // ------------------------------------------------------------
-  // Living Royal 24K Gold Stardust & Diamond Sparkles Engine
-  // ------------------------------------------------------------
-  function initLuxuryAnimatedCanvas() {
-    const canvas = document.getElementById('luxuryCanvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    // Check prefers-reduced-motion
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return;
-    }
-
-    const wrapper = canvas.parentElement || document.body;
-    let width = 0, height = 0;
-    let animId = null;
-    let isVisible = true;
-
-    function resize() {
-      const rect = wrapper.getBoundingClientRect();
-      width = canvas.width = rect.width || window.innerWidth;
-      height = canvas.height = rect.height || window.innerHeight;
-    }
-
-    window.addEventListener('resize', resize, { passive: true });
-    resize();
-
-    // Floating Golden Stardust Particles
-    const count = Math.min(36, Math.max(18, Math.floor(width / 15)));
-    const particles = [];
-    const colors = ['#DEA637', '#FFE6A8', '#FFD700', '#F3CA7E', '#FFF2D1'];
-
-    for (let i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: Math.random() * 2.2 + 0.8,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: - (Math.random() * 0.42 + 0.22),
-        alpha: Math.random() * 0.6 + 0.2,
-        pulseSpeed: Math.random() * 0.03 + 0.015,
-        phase: Math.random() * Math.PI * 2,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      });
-    }
-
-    // Diamond Starburst Sparkles
-    const sparkles = [];
-    function trySpawnSparkle() {
-      if (sparkles.length < 5 && Math.random() < 0.06) {
-        sparkles.push({
-          x: Math.random() * (width - 60) + 30,
-          y: Math.random() * (height - 60) + 30,
-          maxSize: Math.random() * 14 + 10,
-          rot: Math.random() * Math.PI,
-          rotSpeed: (Math.random() - 0.5) * 0.02,
-          life: 0,
-          maxLife: Math.floor(Math.random() * 60 + 55),
-          isDiamond: Math.random() > 0.4
-        });
-      }
-    }
-
-    function drawSparkle(s) {
-      ctx.save();
-      ctx.translate(s.x, s.y);
-      ctx.rotate(s.rot);
-
-      const progress = s.life / s.maxLife;
-      const curve = Math.sin(progress * Math.PI);
-      const curSize = s.maxSize * curve;
-      const alpha = curve;
-
-      const haloColor = s.isDiamond 
-        ? 'rgba(255, 255, 255, ' + (alpha * 0.9) + ')' 
-        : 'rgba(255, 235, 175, ' + (alpha * 0.95) + ')';
-
-      ctx.fillStyle = haloColor;
-      ctx.beginPath();
-      ctx.ellipse(0, 0, curSize, curSize * 0.14, 0, 0, Math.PI * 2);
-      ctx.ellipse(0, 0, curSize * 0.14, curSize, 0, 0, Math.PI * 2);
-      ctx.fill();
-
-      ctx.beginPath();
-      ctx.ellipse(0, 0, curSize * 0.5, curSize * 0.08, Math.PI / 4, 0, Math.PI * 2);
-      ctx.ellipse(0, 0, curSize * 0.08, curSize * 0.5, Math.PI / 4, 0, Math.PI * 2);
-      ctx.fill();
-
-      ctx.beginPath();
-      ctx.arc(0, 0, curSize * 0.22, 0, Math.PI * 2);
-      ctx.fillStyle = '#FFFFFF';
-      ctx.shadowBlur = 10;
-      ctx.shadowColor = s.isDiamond ? '#FFFFFF' : '#FFD700';
-      ctx.fill();
-
-      ctx.restore();
-    }
-
-    function render() {
-      if (!isVisible) return;
-      ctx.clearRect(0, 0, width, height);
-
-      // Dust particles
-      for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
-        p.phase += p.pulseSpeed;
-        const currentAlpha = Math.max(0.1, Math.min(0.9, p.alpha + Math.sin(p.phase) * 0.3));
-
-        p.x += p.vx + Math.sin(p.phase * 0.6) * 0.25;
-        p.y += p.vy;
-
-        if (p.y < -10) { p.y = height + 10; p.x = Math.random() * width; }
-        if (p.x < -10) p.x = width + 10;
-        if (p.x > width + 10) p.x = -10;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = currentAlpha;
-        ctx.shadowBlur = 6;
-        ctx.shadowColor = p.color;
-        ctx.fill();
-      }
-      ctx.globalAlpha = 1;
-      ctx.shadowBlur = 0;
-
-      // Diamond sparkles
-      trySpawnSparkle();
-      for (let i = sparkles.length - 1; i >= 0; i--) {
-        const s = sparkles[i];
-        s.life++;
-        s.rot += s.rotSpeed;
-        drawSparkle(s);
-        if (s.life >= s.maxLife) {
-          sparkles.splice(i, 1);
-        }
-      }
-
-      animId = requestAnimationFrame(render);
-    }
-
-    // Battery & CPU optimization: pause when tab is hidden
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) {
-        isVisible = false;
-        if (animId) cancelAnimationFrame(animId);
-      } else {
-        isVisible = true;
-        resize();
-        animId = requestAnimationFrame(render);
-      }
-    });
-
-    animId = requestAnimationFrame(render);
   }
 
 })();

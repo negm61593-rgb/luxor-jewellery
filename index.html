@@ -34,16 +34,20 @@
   <meta name="apple-mobile-web-app-title" content="LUXOR">
   <meta name="application-name" content="LUXOR JEWELLERY">
 
-  <!-- Google Fonts Preconnect & Async Display -->
+  <!-- High-Speed Asynchronous Fonts (Zero Render-Blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  </noscript>
 
-  <!-- Preload Critical CSS & Hero Image -->
+  <!-- Preload Critical CSS & Hero Avatar Image with High Priority -->
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="avatar.webp" as="image" type="image/webp">
+  <link rel="preload" href="avatar.webp" as="image" type="image/webp" fetchpriority="high">
 
-  <!-- Stylesheet -->
+  <!-- Core Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -63,17 +67,6 @@
 
   <!-- Main Profile Container -->
   <div class="profile-wrapper" id="profileWrapper">
-
-    <!-- Living Liquid Gold Aurora Background -->
-    <div class="luxury-aurora" aria-hidden="true">
-      <div class="aurora-blob aurora-blob--crown"></div>
-      <div class="aurora-blob aurora-blob--1"></div>
-      <div class="aurora-blob aurora-blob--2"></div>
-      <div class="aurora-blob aurora-blob--base"></div>
-    </div>
-
-    <!-- Gold & Diamond Stardust Canvas -->
-    <canvas id="luxuryCanvas" class="luxury-canvas" aria-hidden="true"></canvas>
 
     <!-- Top Navigation Bar -->
     <header class="topbar" id="topBar">
@@ -400,7 +393,7 @@
       <p class="modal-desc" id="modalShareDesc">Scan QR code or copy link to share</p>
 
       <div class="modal-qr-preview">
-        <img src="qr-codes/LUXOR_JEWELLERY_QR.png" alt="QR Code" id="modalQrImg" width="220" height="220" loading="lazy">
+        <img data-src="qr-codes/LUXOR_JEWELLERY_QR.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3C/svg%3E" alt="QR Code" id="modalQrImg" width="220" height="220" loading="lazy">
       </div>
 
       <div class="modal-actions">
@@ -693,7 +686,7 @@
   </div>
 
   <!-- Toast Notice -->
-  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">Link copied to clipboard!</div>
+  <div class="toast-notice" id="toastNotice">Link copied to clipboard!</div>
 
   <!-- Scripts -->
   <script src="config.js" defer></script>
