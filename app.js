@@ -452,7 +452,7 @@
           setTimeout(function () {
             refreshBtn.classList.remove('is-spinning');
           }, 600);
-        });
+        }, true);
       });
     }
 
@@ -498,22 +498,24 @@
     }
   }
 
-  function fetchLiveGoldPrices(doneCallback) {
-    const apiUrl = '/api/gold-prices';
-    const fallbackUrl = './gold-prices.json';
+  function fetchLiveGoldPrices(doneCallback, forceRefresh) {
+    const apiUrl = forceRefresh ? ('/api/gold-prices?t=' + Date.now()) : '/api/gold-prices';
+    const fallbackUrl = forceRefresh ? ('./gold-prices.json?t=' + Date.now()) : './gold-prices.json';
 
-    // Instant render from session storage if recent (< 60s)
-    try {
-      const cached = sessionStorage.getItem('luxor_gold_cache');
-      if (cached) {
-        const parsed = JSON.parse(cached);
-        if (parsed && (Date.now() - (parsed._cachedAt || 0) < 60000)) {
-          handleGoldDataSuccess(parsed);
-          if (doneCallback) doneCallback();
-          return;
+    // Instant render from session storage if recent (< 60s) AND not forceRefresh
+    if (!forceRefresh) {
+      try {
+        const cached = sessionStorage.getItem('luxor_gold_cache');
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (parsed && (Date.now() - (parsed._cachedAt || 0) < 60000)) {
+            handleGoldDataSuccess(parsed);
+            if (doneCallback) doneCallback();
+            return;
+          }
         }
-      }
-    } catch (e) {}
+      } catch (e) {}
+    }
 
     fetch(apiUrl)
       .then(function (res) {
