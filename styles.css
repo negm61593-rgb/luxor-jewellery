@@ -55,10 +55,30 @@ html[lang="ar"], html[dir="rtl"] {
 
 body {
   min-height: 100vh;
-  background: radial-gradient(ellipse at 50% 20%, #5E390C 0%, #2A1804 55%, #150C02 100%);
-  background-color: var(--desktop-frame-color);
+  min-height: 100dvh;
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(255, 235, 170, 0.38) 0%, rgba(222, 166, 55, 0.2) 32%, transparent 65%),
+    linear-gradient(175deg, 
+      #8D5812 0%, 
+      #B3873D 20%, 
+      #DEA637 45%, 
+      #B3873D 65%, 
+      #8D5812 86%, 
+      #5E3300 100%
+    );
+  background-color: var(--luxor-gold);
+  background-attachment: fixed;
+  background-size: cover;
   overflow-x: hidden;
   position: relative;
+}
+
+@media (min-width: 576px) {
+  body {
+    background: radial-gradient(ellipse at 50% 20%, #5E390C 0%, #2A1804 55%, #150C02 100%);
+    background-color: var(--desktop-frame-color);
+    background-attachment: scroll;
+  }
 }
 
 /* Radiant Luxor Gold ambient lighting */
@@ -83,17 +103,7 @@ body::before {
   max-width: var(--profile-container-desktop-width);
   margin: 0 auto;
   min-height: 100vh;
-  background: 
-    radial-gradient(circle at 50% 0%, rgba(255, 235, 170, 0.38) 0%, rgba(222, 166, 55, 0.2) 32%, transparent 65%),
-    linear-gradient(175deg, 
-      #8D5812 0%, 
-      #B3873D 20%, 
-      #DEA637 45%, 
-      #B3873D 65%, 
-      #8D5812 86%, 
-      #5E3300 100%
-    );
-  background-color: var(--luxor-gold);
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,6 +112,18 @@ body::before {
 
 @media (min-width: 576px) {
   .profile-wrapper {
+    background: 
+      radial-gradient(circle at 50% 0%, rgba(255, 235, 170, 0.38) 0%, rgba(222, 166, 55, 0.2) 32%, transparent 65%),
+      linear-gradient(175deg, 
+        #8D5812 0%, 
+        #B3873D 20%, 
+        #DEA637 45%, 
+        #B3873D 65%, 
+        #8D5812 86%, 
+        #5E3300 100%
+      );
+    background-color: var(--luxor-gold);
+    background-attachment: fixed;
     margin-top: 18px;
     margin-bottom: 24px;
     min-height: calc(100vh - 42px);
@@ -111,24 +133,25 @@ body::before {
   }
 }
 
-/* --- Royal Debossed Stamp Watermark (ختم لوكسور الغائر الملكي في خلفية الموقع) --- */
+/* --- Royal Debossed Stamp Watermark (ختم لوكسور الغائر الملكي ثابت في منتصف الشاشة دائماً) --- */
 .brand-watermark-stamp {
-  position: absolute;
-  top: 308px;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, -50%, 0);
   width: min(420px, 88vw);
   pointer-events: none;
   z-index: 0;
   opacity: 0.90;
   user-select: none;
+  will-change: transform;
 }
 
 .brand-watermark-stamp img {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
 }
 
 /* --- Top Bar --- */

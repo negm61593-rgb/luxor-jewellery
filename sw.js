@@ -1,11 +1,11 @@
 // LUXOR JEWELLERY Service Worker — Ultra-High Performance PWA Cache (Instant Load)
-const CACHE_NAME = 'luxor-v6.5-carved';
+const CACHE_NAME = 'luxor-v6.6-fixedbg';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
-  'styles.css?v=6.5',
+  'styles.css?v=6.6',
   'styles.css',
-  'app.js?v=6.5',
+  'app.js?v=6.6',
   'app.js',
   'config.js?v=6.5',
   'config.js',
