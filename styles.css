@@ -135,28 +135,35 @@ body::before {
 
 /* --- Royal Debossed Stamp Watermark (ختم لوكسور الغائر الملكي ثابت تماماً في خلفية الشاشة) --- */
 .brand-watermark-stamp {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.90;
-  user-select: none;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  width: 100% !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  opacity: 0.90 !important;
+  user-select: none !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 
 .brand-watermark-stamp img {
-  width: min(420px, 88vw);
-  max-width: 420px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
-  pointer-events: none;
+  width: min(420px, 88vw) !important;
+  max-width: 420px !important;
+  height: auto !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45)) !important;
+  pointer-events: none !important;
 }
 
 /* --- Top Bar --- */

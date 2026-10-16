@@ -1,13 +1,13 @@
 // LUXOR JEWELLERY Service Worker — Ultra-High Performance PWA Cache (Instant Load)
-const CACHE_NAME = 'luxor-v6.7-rocksolid';
+const CACHE_NAME = 'luxor-v6.9-fixedseal';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
-  'styles.css?v=6.7',
+  'styles.css?v=6.9',
   'styles.css',
-  'app.js?v=6.7',
+  'app.js?v=6.9',
   'app.js',
-  'config.js?v=6.7',
+  'config.js?v=6.9',
   'config.js',
   'avatar.webp',
   'avatar.jpg',
@@ -45,7 +45,17 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
-    }).then(() => self.clients.claim())
+    })
+    .then(() => self.clients.claim())
+    .then(() => {
+      return self.clients.matchAll({ type: 'window' }).then((clients) => {
+        clients.forEach((client) => {
+          if (client.url && 'navigate' in client) {
+            client.navigate(client.url);
+          }
+        });
+      });
+    })
   );
 });
 
@@ -94,7 +104,25 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 3. Static Assets (CSS, JS, Images, Fonts): Stale-While-Revalidate
+  // 3. Styles and Scripts: Network-First to guarantee immediate updates on mobile
+  if (url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+          }
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // 4. Media & Static Assets (Images, Manifest, SVG): Stale-While-Revalidate
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       const fetchPromise = fetch(event.request).then((networkResponse) => {

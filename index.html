@@ -50,6 +50,28 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Instant PWA Cache Purge & Fresh Asset Enforcement -->
+  <script>
+    (function () {
+      var LATEST_BUILD = 'luxor-v6.9-fixedseal';
+      try {
+        if (localStorage.getItem('luxor_app_build') !== LATEST_BUILD) {
+          localStorage.setItem('luxor_app_build', LATEST_BUILD);
+          if ('caches' in window) {
+            caches.keys().then(function (names) {
+              names.forEach(function (name) { caches.delete(name); });
+            });
+          }
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (regs) {
+              regs.forEach(function (reg) { reg.update(); });
+            });
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -67,8 +89,8 @@
   </div>
 
   <!-- Royal Brand Stamp Watermark in Background (ختم لوكسور الملكي ثلاثي الأبعاد ثابت في الخلفية تماماً) -->
-  <div class="brand-watermark-stamp" id="brandWatermarkStamp" aria-hidden="true">
-    <img src="logo_carved_stamp.webp" alt="" width="420" height="214" loading="eager" decoding="async">
+  <div class="brand-watermark-stamp" id="brandWatermarkStamp" aria-hidden="true" style="position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100vw!important;width:100%!important;height:100vh!important;height:100dvh!important;display:flex!important;align-items:center!important;justify-content:center!important;pointer-events:none!important;z-index:0!important;opacity:0.90!important;user-select:none!important;-webkit-transform:translateZ(0)!important;transform:translateZ(0)!important;-webkit-backface-visibility:hidden!important;backface-visibility:hidden!important;">
+    <img src="logo_carved_stamp.webp" alt="" width="420" height="214" loading="eager" decoding="async" style="width:min(420px,88vw)!important;max-width:420px!important;height:auto!important;display:block!important;filter:drop-shadow(0 4px 10px rgba(0,0,0,0.45))!important;pointer-events:none!important;">
   </div>
 
   <!-- Main Profile Container -->
