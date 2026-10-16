@@ -1,13 +1,13 @@
 // LUXOR JEWELLERY Service Worker — Ultra-High Performance PWA Cache (Instant Load)
-const CACHE_NAME = 'luxor-v6.1-stamp';
+const CACHE_NAME = 'luxor-v6.2-stamp';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
-  'styles.css?v=6.0',
+  'styles.css?v=6.2',
   'styles.css',
-  'app.js?v=6.0',
+  'app.js?v=6.2',
   'app.js',
-  'config.js?v=6.0',
+  'config.js?v=6.2',
   'config.js',
   'avatar.webp',
   'avatar.jpg',
@@ -72,11 +72,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. Navigation (HTML Pages): Stale-While-Revalidate for Instant 0.05s Load
+  // 2. Navigation (HTML Pages): Network-First with instant offline cache fallback
   if (event.request.mode === 'navigate') {
     event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        const fetchPromise = fetch(event.request).then((networkResponse) => {
+      fetch(event.request)
+        .then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             const responseToCache = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => {
@@ -84,13 +84,12 @@ self.addEventListener('fetch', (event) => {
             });
           }
           return networkResponse;
-        }).catch(() => {
-          return caches.match('./').then(res => res || caches.match('index.html'));
-        });
-
-        if (cachedResponse) return cachedResponse;
-        return caches.match('./').then(r => r || caches.match('index.html')).then(fallback => fallback || fetchPromise);
-      })
+        })
+        .catch(() => {
+          return caches.match(event.request)
+            .then((res) => res || caches.match('./'))
+            .then((r) => r || caches.match('index.html'));
+        })
     );
     return;
   }

@@ -113,22 +113,22 @@ body::before {
 
 /* --- Royal Brand Stamp Watermark in Background (ختم لوكسور الملكي في الخلفية) --- */
 .brand-watermark-stamp {
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 130px;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: min(420px, 88vw);
-  height: 215px;
+  transform: translate3d(-50%, 0, 0);
+  width: min(400px, 92vw);
+  height: 270px;
   background-image: url('logo_stamp.png');
   background-image: url('logo_stamp.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.26;
+  opacity: 0.44;
   pointer-events: none;
   z-index: 1;
   user-select: none;
-  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 6px 22px rgba(0, 0, 0, 0.45));
   will-change: transform;
 }
 
