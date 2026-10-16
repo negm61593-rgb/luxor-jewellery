@@ -90,12 +90,12 @@ const CONFIG = {
   // --- Live Gold Prices Configuration ( لحظة بلحظة ) ---
   goldPrices: {
     enabled: true,
-    sourceUrl: 'https://goldbullioneg.com/%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%87%D8%A8/',
+    sourceUrl: '',
     apiUrl: '/api/gold-prices',
     fallbackUrl: './gold-prices.json',
     refreshIntervalMs: 60000,
-    sourceNameAr: 'جولد بيليون (Gold Bullion EG)',
-    sourceNameEn: 'Gold Bullion EG'
+    sourceNameAr: 'سوق الصاغة في مصر',
+    sourceNameEn: 'Egyptian Gold Market'
   },
 
   // --- Location Placeholder ---
