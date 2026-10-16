@@ -145,7 +145,7 @@
     setText('goldLblUsd', isAr ? 'الدولار' : 'USD / EGP');
     setText('goldLblOunce', isAr ? 'الأونصة' : 'Gold Ounce');
     setText('goldLblPound', isAr ? 'الجنيه الذهب' : 'Gold Pound');
-    setText('goldSourceText', isAr ? 'المصدر: Gold Bullion' : 'Source: Gold Bullion');
+    setText('goldMarketTag', isAr ? 'أسعار الصاغة في مصر' : 'Egyptian Gold Market');
     setAttr('goldRefreshBtn', 'title', isAr ? 'تحديث الأسعار الآن' : 'Refresh Gold Rates');
     setAttr('goldRefreshBtn', 'aria-label', isAr ? 'تحديث أسعار الذهب الآن' : 'Refresh Gold Rates Now');
     updateGoldToggleBtnText(isAr);
