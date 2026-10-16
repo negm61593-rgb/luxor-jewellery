@@ -46,6 +46,7 @@
   <!-- Preload Critical CSS & Hero Avatar Image with High Priority -->
   <link rel="preload" href="styles.css" as="style">
   <link rel="preload" href="avatar.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="logo_stamp.webp" as="image" type="image/webp">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -67,6 +68,9 @@
 
   <!-- Main Profile Container -->
   <div class="profile-wrapper" id="profileWrapper">
+
+    <!-- Royal Brand Stamp Watermark in Background (ختم لوكسور الملكي في الخلفية) -->
+    <div class="brand-watermark-stamp" id="brandWatermarkStamp" aria-hidden="true"></div>
 
     <!-- Top Navigation Bar -->
     <header class="topbar" id="topBar">

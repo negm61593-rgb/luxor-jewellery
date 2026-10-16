@@ -25,7 +25,7 @@
       ]
     },
     {
-      "source": "/(avatar.webp|avatar.jpg|favicon.svg|icon-192.png|icon-512.png|icon-maskable-512.png)",
+      "source": "/(avatar.webp|avatar.jpg|logo_stamp.webp|logo_stamp.png|favicon.svg|icon-192.png|icon-512.png|icon-maskable-512.png)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]

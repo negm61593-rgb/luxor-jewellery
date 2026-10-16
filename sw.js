@@ -1,5 +1,5 @@
 // LUXOR JEWELLERY Service Worker — Ultra-High Performance PWA Cache (Instant Load)
-const CACHE_NAME = 'luxor-v6-ultra';
+const CACHE_NAME = 'luxor-v6.1-stamp';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
@@ -11,6 +11,8 @@ const ASSETS_TO_CACHE = [
   'config.js',
   'avatar.webp',
   'avatar.jpg',
+  'logo_stamp.webp',
+  'logo_stamp.png',
   'favicon.svg',
   'manifest.webmanifest',
   'icon-192.png',

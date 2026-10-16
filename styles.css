@@ -111,6 +111,27 @@ body::before {
   }
 }
 
+/* --- Royal Brand Stamp Watermark in Background (ختم لوكسور الملكي في الخلفية) --- */
+.brand-watermark-stamp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: min(420px, 88vw);
+  height: 215px;
+  background-image: url('logo_stamp.png');
+  background-image: url('logo_stamp.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.26;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.35));
+  will-change: transform;
+}
+
 /* --- Top Bar --- */
 .topbar {
   position: sticky;
@@ -223,6 +244,8 @@ body::before {
 
 /* --- Profile Header --- */
 .profile-header {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,6 +355,8 @@ body::before {
 
 /* --- Links Container --- */
 .links-container {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: var(--link-gap);
@@ -345,7 +370,7 @@ body::before {
   align-items: center;
   justify-content: center;
   min-height: 62px;
-  background: linear-gradient(135deg, rgba(32, 20, 5, 0.94) 0%, rgba(20, 12, 3, 0.98) 100%);
+  background: linear-gradient(135deg, rgba(32, 20, 5, 0.84) 0%, rgba(20, 12, 3, 0.88) 100%);
   border: 1px solid rgba(222, 166, 55, 0.42);
   color: var(--button-style-text);
   border-radius: var(--button-style-radius);
@@ -454,6 +479,8 @@ body::before {
 
 /* --- Footer --- */
 .profile-footer {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
