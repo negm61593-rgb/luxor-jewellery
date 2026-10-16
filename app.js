@@ -355,7 +355,7 @@
   // ------------------------------------------------------------
   function initPwa() {
     try {
-      const CURRENT_VER = 'luxor-v6.4-imprint';
+      const CURRENT_VER = 'luxor-v6.5-carved';
       if (localStorage.getItem('luxor_cache_ver') !== CURRENT_VER) {
         localStorage.setItem('luxor_cache_ver', CURRENT_VER);
         if ('caches' in window) {
