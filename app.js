@@ -355,7 +355,7 @@
   // ------------------------------------------------------------
   function initPwa() {
     try {
-      const CURRENT_VER = 'luxor-v6.6-fixedbg';
+      const CURRENT_VER = 'luxor-v6.7-rocksolid';
       if (localStorage.getItem('luxor_cache_ver') !== CURRENT_VER) {
         localStorage.setItem('luxor_cache_ver', CURRENT_VER);
         if ('caches' in window) {
