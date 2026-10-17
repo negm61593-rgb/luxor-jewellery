@@ -355,7 +355,7 @@
   // ------------------------------------------------------------
   function initPwa() {
     try {
-      const CURRENT_VER = 'luxor-v7.0-newlinks';
+      const CURRENT_VER = 'luxor-v7.1-responsiveall';
       if (localStorage.getItem('luxor_cache_ver') !== CURRENT_VER) {
         localStorage.setItem('luxor_cache_ver', CURRENT_VER);
         if ('caches' in window) {
