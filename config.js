@@ -40,8 +40,8 @@ const CONFIG = {
 
   // --- Official Social Media Profiles ---
   social: {
-    facebook: 'https://www.facebook.com/oval.jewellery?mibextid=LQQJ4d',
-    facebookPage: 'https://www.facebook.com/Luxorjewellery.eg/',
+    facebook: 'https://www.facebook.com/share/1DJ8De13Di/?mibextid=wwXIfr',
+    facebookPage: 'https://www.facebook.com/share/1DJ8De13Di/?mibextid=wwXIfr',
     instagram: 'https://www.instagram.com/luxorjewellery.eg/',
     instagramProfileCard: 'https://www.instagram.com/luxorjewellery.eg/profilecard/?igsh=MW92eGo1ZGhncG96ZA==',
     instagramDirect: 'https://www.instagram.com/luxorjewellery.eg?igsh=MTEwOHoyaTJreDY0cg==',
@@ -50,7 +50,7 @@ const CONFIG = {
 
   // --- Official Community Channels ---
   community: {
-    whatsappGroup: 'https://chat.whatsapp.com/Kug2FhxW8iFCw8tG0crjMT',
+    whatsappGroup: 'https://chat.whatsapp.com/GzjJbqYkB5M03sYwbSUI1S?mode=gi_t',
     whatsappChannel: 'https://whatsapp.com/channel/0029VaDlshU2P59jNmXzFy3g',
     telegram: 'https://t.me/Ovaljewellwery'
   },

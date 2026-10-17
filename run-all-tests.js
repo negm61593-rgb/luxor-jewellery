@@ -49,11 +49,11 @@ assert('Line 2 WhatsApp link is https://wa.me/201007485585', CONFIG.phone2.whats
 // 3. SOCIAL & COMMUNITY URLS (UNMODIFIED EXACT URLS)
 console.log('\n3. Official Social & Community URLs');
 assert('Facebook URL matches exact supplied link', 
-  CONFIG.social.facebook === 'https://www.facebook.com/oval.jewellery?mibextid=LQQJ4d');
+  CONFIG.social.facebook === 'https://www.facebook.com/share/1DJ8De13Di/?mibextid=wwXIfr');
 assert('Instagram URL matches active profile link', 
   CONFIG.social.instagram === 'https://www.instagram.com/luxorjewellery.eg/');
 assert('WhatsApp Group URL matches exact supplied link', 
-  CONFIG.community.whatsappGroup === 'https://chat.whatsapp.com/Kug2FhxW8iFCw8tG0crjMT');
+  CONFIG.community.whatsappGroup === 'https://chat.whatsapp.com/GzjJbqYkB5M03sYwbSUI1S?mode=gi_t');
 assert('WhatsApp Channel URL matches exact supplied link', 
   CONFIG.community.whatsappChannel === 'https://whatsapp.com/channel/0029VaDlshU2P59jNmXzFy3g');
 assert('Telegram Channel URL matches exact supplied link', 
@@ -138,9 +138,9 @@ assert('Rendered DOM contains Buying & Selling Gold', dumpedDom.includes('Buying
 assert('Rendered DOM contains Buying & Selling Diamonds', dumpedDom.includes('Diamonds'));
 assert('Rendered DOM contains Buying & Selling Silver', dumpedDom.includes('Silver'));
 assert('Rendered DOM contains Watch Evaluation & Purchasing', dumpedDom.includes('Watch'));
-assert('Rendered DOM contains Facebook link', dumpedDom.includes('https://www.facebook.com/oval.jewellery?mibextid=LQQJ4d'));
+assert('Rendered DOM contains Facebook link', dumpedDom.includes('https://www.facebook.com/share/1DJ8De13Di/?mibextid=wwXIfr'));
 assert('Rendered DOM contains Instagram link', dumpedDom.includes('https://www.instagram.com/luxorjewellery.eg/'));
-assert('Rendered DOM contains WhatsApp Group link', dumpedDom.includes('https://chat.whatsapp.com/Kug2FhxW8iFCw8tG0crjMT'));
+assert('Rendered DOM contains WhatsApp Group link', dumpedDom.includes('https://chat.whatsapp.com/GzjJbqYkB5M03sYwbSUI1S?mode=gi_t'));
 assert('Rendered DOM contains WhatsApp Channel link', dumpedDom.includes('https://whatsapp.com/channel/0029VaDlshU2P59jNmXzFy3g'));
 assert('Rendered DOM contains Telegram link', dumpedDom.includes('https://t.me/Ovaljewellwery'));
 assert('Rendered DOM contains Group badge', dumpedDom.includes('community-badge--group'));

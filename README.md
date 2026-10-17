@@ -13,9 +13,9 @@ A high-end, responsive digital business card website and print-ready QR code sys
   - **Line 1 (01018780830)**: Direct phone call (`tel:+201018780830`) and WhatsApp chat (`https://wa.me/201018780830`).
   - **Line 2 (01007485585)**: Direct phone call (`tel:+201007485585`) and WhatsApp chat (`https://wa.me/201007485585`).
 - **Verified Official Links**:
-  - **Facebook**: `https://www.facebook.com/oval.jewellery?mibextid=LQQJ4d`
+  - **Facebook**: `https://www.facebook.com/share/1DJ8De13Di/?mibextid=wwXIfr`
   - **Instagram**: `https://www.instagram.com/luxorjewellery.eg/profilecard/?igsh=MW92eGo1ZGhncG96ZA==`
-  - **WhatsApp Group**: `https://chat.whatsapp.com/Kug2FhxW8iFCw8tG0crjMT` (clearly labeled with group badge)
+  - **WhatsApp Group**: `https://chat.whatsapp.com/GzjJbqYkB5M03sYwbSUI1S?mode=gi_t` (clearly labeled with group badge)
   - **WhatsApp Channel**: `https://whatsapp.com/channel/0029VaDlshU2P59jNmXzFy3g` (clearly labeled with broadcast badge)
   - **Telegram Channel**: `https://t.me/Ovaljewellwery`
 - **Store Services**:

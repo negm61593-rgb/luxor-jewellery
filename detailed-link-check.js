@@ -7,10 +7,10 @@ async function testAll() {
     { name: 'Direct Call Mahmoud', url: 'tel:+201018780830', type: 'tel' },
     { name: 'Direct Call Hossam', url: 'tel:+201007485585', type: 'tel' },
     { name: 'Google Maps', url: 'https://maps.app.goo.gl/bmKmoFWtbZMyiJHK7', type: 'maps' },
-    { name: 'WhatsApp Group', url: 'https://chat.whatsapp.com/Kug2FhxW8iFCw8tG0crjMT', type: 'community' },
+    { name: 'WhatsApp Group', url: 'https://chat.whatsapp.com/GzjJbqYkB5M03sYwbSUI1S?mode=gi_t', type: 'community' },
     { name: 'WhatsApp Channel', url: 'https://whatsapp.com/channel/0029VaDlshU2P59jNmXzFy3g', type: 'community' },
     { name: 'Telegram Channel', url: 'https://t.me/Ovaljewellwery', type: 'community' },
-    { name: 'Facebook', url: 'https://www.facebook.com/oval.jewellery?mibextid=LQQJ4d', type: 'social' },
+    { name: 'Facebook', url: 'https://www.facebook.com/share/1DJ8De13Di/?mibextid=wwXIfr', type: 'social' },
     { name: 'Instagram', url: 'https://www.instagram.com/luxorjewellery.eg/', type: 'social' },
     { name: 'TikTok', url: 'https://www.tiktok.com/@luxorjewellery.eg?lang=ar', type: 'social' },
     { name: 'vCard Download', url: 'contact.vcf', type: 'file' }
